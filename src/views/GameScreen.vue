@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import Timer from '../views/Timer.vue'
+    import Timer from '../components/Timer.vue'
 
     export default {
         name: "GameScreen",

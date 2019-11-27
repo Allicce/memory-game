@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import About from '../views/About.vue'
-import GameScreen from '../components/GameScreen'
+import GameScreen from '../views/GameScreen'
 import WelcomePage from '../views/WelcomePage'
 
 Vue.use(VueRouter)
