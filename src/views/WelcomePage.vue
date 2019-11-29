@@ -28,7 +28,6 @@ export default {
   name: 'home',
   components: {
     Button
-
   }
 }
 </script>

@@ -81,12 +81,10 @@ export default {
  @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
  html, body, main {
-      height: 100%;
-      width: 100%;
+      width: 100vw;
  }
 
  body {
-      /*background: black;*/
       color: #D53738;
       font: 7vh 'Orbitron', sans-serif;
  }
@@ -94,7 +92,7 @@ export default {
  main {
       align-items: center;
       display: flex;
-      justify-content: center;
+      justify-content: end;
  }
 
  time {
@@ -104,9 +102,9 @@ export default {
  }
 
  .timer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .time_container {
@@ -115,7 +113,7 @@ export default {
 
  .flicking {
       -webkit-animation: flicker 2s infinite;
-      color: red;
+      color: #D53738;
  }
 
  @-webkit-keyframes flicker {
