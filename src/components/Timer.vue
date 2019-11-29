@@ -1,7 +1,8 @@
 <template>
      <main id="clock">
           <template v-if="finished">
-               BOOM
+            <!-- <router-link :to="`/gameScreen/usersResults`"></router-link> -->
+            BOOM
           </template>
           <template v-else>
                <time :style="gradient" class="timer">

@@ -1,14 +1,24 @@
 <template>
   <div class="button_cont">
-    <a class="green_button" href="add-website-here"
-       rel="nofollow noopener">Button</a>
+    <p class="green_button" @click="pressButton(routeTo)">{{name}}</p>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'button'
+  name: 'button',
+  props: [
+    'name',
+    'routeTo'
+  ],
+  methods: {
+    pressButton (path) {
+      this.$router.push(path)
+    }
+
+  }
+
 }
 </script>
 

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import About from '../views/About.vue'
 import GameScreen from '../views/GameScreen'
 import WelcomePage from '../views/WelcomePage'
+import UsersResults from '../views/UsersResults'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/gameScreen',
     name: 'gameScreen',
     component: GameScreen
+  },
+  {
+    path: '/gameScreen/usersResults',
+    name: 'usersResults',
+    component: UsersResults
   }
 ]
 

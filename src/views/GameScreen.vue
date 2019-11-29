@@ -6,14 +6,14 @@
 </template>
 
 <script>
-    import Timer from '../components/Timer.vue'
+import Timer from '../components/Timer.vue'
 
-    export default {
-        name: "GameScreen",
-        components: {
-            'Timer': Timer
-        }
-    }
+export default {
+  name: 'GameScreen',
+  components: {
+    'Timer': Timer
+  }
+}
 </script>
 
 <style scoped>
