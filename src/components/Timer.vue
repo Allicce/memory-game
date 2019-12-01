@@ -1,7 +1,7 @@
 <template>
      <main id="clock">
-          <template v-if="finished">
-            <!-- <router-link :to="`/gameScreen/usersResults`"></router-link> -->
+          <template v-if="finished" >
+            <router-link to="/gameScreen/usersResults">Haf</router-link>
             BOOM
           </template>
           <template v-else>
@@ -58,9 +58,9 @@ export default {
     },
     changeColor () {
       if (this.isEndThreeSeconds) {
-        return 'lightblue'
+        return '#42b983'
       } else {
-        return 'red'
+        return '#D53738'
       }
     },
     gradient () {
@@ -73,6 +73,9 @@ export default {
     this.tick = setInterval(() => {
       this.now = DateTime.local()
     }, 10)
+    setTimeout(() => {
+      this.$router.push('/gameScreen/usersResults')
+    }, 15000)
   }
 }
 </script>
@@ -81,7 +84,7 @@ export default {
  @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
  html, body, main {
-      width: 100vw;
+      width: 10vw;
  }
 
  body {

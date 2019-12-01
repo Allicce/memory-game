@@ -11,14 +11,16 @@ export default {
   name: 'Number',
   data () {
     return {
-      numbers: []
+      numbers: [],
+      watchNumber: []
     }
   },
   methods: {
     randomNumber () {
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i <= 5; i++) {
         this.numbers[i] = parseInt(Math.random() * 300 + 1)
       }
+      this.watchNumber = this.numbers
     }
   },
   created () {
@@ -33,11 +35,13 @@ export default {
     margin: auto;
     display: flex;
     justify-content: space-between;
+
   }
 
   h1 {
-    background-color: lightgreen;
+    background-color: #041F1E;
     padding: 0 20px;
     border-radius: 5%;
+    color: white;
   }
 </style>
