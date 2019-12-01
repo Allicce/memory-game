@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <heading />
-    <div id="nav">
+   <!-- <div id="nav">
       <router-link to="/">Welcome Page</router-link> |
       <router-link to="/gameScreen">Game Screen</router-link>
-    </div>
+    </div>-->
     <router-view/>
   </div>
 </template>
 <script>
-import Header from './components/Header.vue'
 export default {
   components: {
-    'heading': Header
   }
 }
 </script>

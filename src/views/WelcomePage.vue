@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <heading />
     <div class="text">
       <h1>Objav čo tvoja pamäť dokáže</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
@@ -23,17 +24,20 @@
 <script>
 // @ is an alias to /src
 import Button from '../components/Button.vue'
+import Header from '../components/Header.vue'
 
 export default {
   name: 'home',
   components: {
-    Button
+    Button,
+    'heading': Header
 
   }
 }
 </script>
 
 <style scoped>
+
   .container {
     display: flex;
     justify-content: space-between;

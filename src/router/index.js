@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import GameScreen from '../views/GameScreen'
 import WelcomePage from '../views/WelcomePage'
 import UsersResults from '../views/UsersResults'
+import ContactUs from '../views/ContactUs'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/gameScreen/usersResults',
     name: 'usersResults',
     component: UsersResults
+  },
+  {
+    path: '/contact-us',
+    name: 'contactUs',
+    component: ContactUs
   }
 ]
 
