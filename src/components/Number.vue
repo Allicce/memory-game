@@ -7,20 +7,24 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'Number',
   data () {
     return {
-      numbers: [],
-      watchNumber: []
+      numbers: []
     }
   },
   methods: {
+    ...mapActions([
+      'addArray'
+    ]),
     randomNumber () {
       for (let i = 0; i <= 5; i++) {
         this.numbers[i] = parseInt(Math.random() * 300 + 1)
       }
-      this.watchNumber = this.numbers
+      this.addArray(this.numbers)
     }
   },
   created () {
