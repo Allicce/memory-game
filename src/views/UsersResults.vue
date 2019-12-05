@@ -1,20 +1,24 @@
 <template>
     <div>
       <h1>Uzivatel pise vysledok</h1>
-      <p v-for="(num, index) in watchNumber" :key="index">{{num}}</p>
+      <div>
+        <Input v-for="index in 6" :key="index"/>
+      </div>
+      <Button class="button" name="Výsledok" routeTo="/results"/>
+
     </div>
 
 </template>
 
 <script>
+import Input from '../components/Input'
+import Button from '../components/Button'
 
 export default {
   name: 'UsersResults',
-  props: {
-    watchNumber: Array
-  },
   components: {
-
+    Input,
+    Button
   }
 }
 </script>
