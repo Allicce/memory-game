@@ -4,6 +4,7 @@
       <div>
         <Input v-for="index in 6" :key="index"/>
       </div>
+      <p>{{numberA}}</p>
       <Button class="button" name="Výsledok" routeTo="/results"/>
 
     </div>

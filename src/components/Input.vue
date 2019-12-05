@@ -1,12 +1,24 @@
 <template>
     <div>
-      <input/>
+      <input v-model="number"
+      @keydown.tab="addNumber"/>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'Input'
+  name: 'Input',
+  data () {
+    return {
+      number: '',
+      numbers: []
+    }
+  },
+  methods: {
+    addNumber () {
+      this.numbers.push(this.number)
+    }
+  }
 }
 </script>
 
