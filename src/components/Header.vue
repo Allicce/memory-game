@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-<div class="logo"><h1>KAŠdesign</h1></div>
+<div class="logo"> <router-link to="/"><h1>KAŠdesign</h1></router-link></div>
 <navigation />
 </div>
 </template>
@@ -31,5 +31,9 @@ h1 {
 .logo {
   height: 53px;
   padding: auto;
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
 }
 </style>

@@ -3,7 +3,7 @@
     <heading />
     <h1>O nás</h1>
     <profile />
-    <profile :class="container = change" />
+    <profile class="change" />
     <profile />
   </div>
 </template>
@@ -20,6 +20,7 @@ export default {
 </script>
 <style>
 .change {
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    background-color: rgb(230, 255, 248);
 }
 </style>
