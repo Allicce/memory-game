@@ -2,9 +2,9 @@
   <div class="about">
     <heading />
     <h1>O nás</h1>
-    <profile />
-    <profile class="change" />
-    <profile />
+    <profile title="O hře"/>
+    <profile title="Bětka" class="change" />
+    <profile title="Katka"/>
   </div>
 </template>
 
