@@ -1,8 +1,9 @@
 <template>
     <div>
+      <p v-if="alert"> Musí to byť číslo</p>
       <input v-model="inputNumber"
-      @keydown.tab="addNumber"/>
-      <p>{{number}}</p>
+      @change="addNumber"
+      type="number"/>
     </div>
 </template>
 
@@ -13,7 +14,8 @@ export default {
   name: 'Input',
   data () {
     return {
-      number: -1
+      number: '',
+      alert: false
     }
   },
   computed: {
@@ -31,7 +33,6 @@ export default {
       'addUserArray'
     ]),
     addNumber () {
-      console.log('log ' + this.number)
       this.addUserArray(this.number)
     }
   }
