@@ -4,7 +4,7 @@ export default {
   },
 
   addUsersNumber: (state, payload) => {
-    state.usersNumber.push(payload)
+    state.usersNumber[payload.index] = payload.number
   },
 
   resetToDefault: (state, payload) => {

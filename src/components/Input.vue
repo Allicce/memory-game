@@ -4,7 +4,7 @@
       <div class="input_container">
         <input v-model="inputNumber"
         @change="addNumber"
-        type="number"/>
+        type="number" autofocus/>
       </div>
     </div>
 </template>
@@ -14,6 +14,12 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'Input',
+  props: {
+    inputIndex: {
+      type: Number,
+      required: true
+    }
+  },
   data () {
     return {
       number: '',
@@ -35,7 +41,10 @@ export default {
       'addUserArray'
     ]),
     addNumber () {
-      this.addUserArray(this.number)
+      const index = this.inputIndex - 1
+      const object = { number: this.number,
+        index: index }
+      this.addUserArray(object)
     }
   }
 }

@@ -23,7 +23,8 @@ export default {
       start: DateTime.local(),
       now: DateTime.local(),
       end: DateTime.local().plus({ seconds: 15 }),
-      tick: null
+      tick: null,
+      timeout: ''
     }
   },
   watch: {
@@ -72,9 +73,13 @@ export default {
     this.tick = setInterval(() => {
       this.now = DateTime.local()
     }, 10)
-    setTimeout(() => {
+    this.timeout = setTimeout(() => {
       this.$router.push('/gameScreen/usersResults')
     }, 15000)
+  },
+  destroyed () {
+    console.log('clearTimeout')
+    clearTimeout(this.timeout)
   }
 }
 </script>

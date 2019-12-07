@@ -2,7 +2,7 @@
     <div class="container">
       <h1>Uzivatel pise vysledok</h1>
       <div class="input_container">
-        <Input v-for="index in 6" :key="index"/>
+        <Input v-for="index in 6" :key="index" :inputIndex="index"/>
       </div>
       <Button class="button" name="Výsledok" routeTo="/results"/>
 
@@ -19,6 +19,14 @@ export default {
   components: {
     Input,
     Button
+  },
+  data () {
+    return {
+    }
+  },
+  computed: {
+  },
+  methods: {
   }
 }
 </script>

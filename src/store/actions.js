@@ -3,12 +3,11 @@ export default {
     commit('addWatchNumbers', array)
   },
 
-  addUserArray: ({ commit }, number) => {
-    commit('addUsersNumber', number)
+  addUserArray: ({ commit }, object) => {
+    commit('addUsersNumber', object)
   },
 
   getDefaultState: ({ commit }) => {
     commit('resetToDefault', [])
   }
-
 }
