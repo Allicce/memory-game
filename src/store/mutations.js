@@ -5,5 +5,9 @@ export default {
 
   addUsersNumber: (state, payload) => {
     state.usersNumber.push(payload)
+  },
+
+  resetToDefault: (state, payload) => {
+    state.usersNumber = payload
   }
 }

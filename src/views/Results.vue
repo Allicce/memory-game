@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
+
 import Header from '../components/Header'
 import _ from 'lodash'
 import Button from '../components/Button'
@@ -47,8 +48,20 @@ export default {
       'usersNumber'
     ])
   },
+  methods: {
+    ...mapActions([
+      'getDefaultState'
+    ]),
+    resetUsersNumber () {
+      this.getDefaultState()
+    }
+
+  },
   created () {
     this.isEqual = _.isEqual(this.watchNumber, this.usersNumber)
+  },
+  destroyed () {
+    this.resetUsersNumber()
   }
 }
 </script>
