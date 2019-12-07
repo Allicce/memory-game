@@ -4,6 +4,6 @@ export default {
   },
 
   addUsersNumber: (state, payload) => {
-    state.userNumber.push(payload)
+    state.usersNumber.push(payload)
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
+    <Header/>
     <h1>Results</h1>
-    <return-to-home-page></return-to-home-page>
     <div v-for="(number, index) in watchNumber" :key="index"> {{ number }}</div>
     <hr>
     <div v-for="(number, index) in usersNumber" :key="index"> {{ number }}</div>
@@ -10,11 +10,12 @@
 
 <script>
 import { mapState } from 'vuex'
-import ReturnToHomePage from '../components/ReturnToHomePage'
+import Header from '../components/Header'
+
 export default {
   name: 'Results',
   components: {
-    ReturnToHomePage
+    Header
   },
   data () {
     return {

@@ -4,6 +4,7 @@ export default {
   },
 
   addUserArray: ({ commit }, number) => {
+    console.log(number)
     commit('addUsersNumber', number)
   }
 
