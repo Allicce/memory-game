@@ -12,7 +12,7 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
       <Button class="button" name="hraj" routeTo="/gameScreen"/>
-      <Button class="button" name="Trenuj"/>
+      <Button class="button" name="Trenuj" routeTo="/pageUnderConstruction"/>
       <div class="monster right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>

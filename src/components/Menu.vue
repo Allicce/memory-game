@@ -2,8 +2,8 @@
   <div class="nav">
     <ul>
       <li><router-link to="/about">O nás</router-link></li>
-      <li><a href="www.google.com">Trénuj</a></li>
-      <li><a href="www.google.com">Hraj</a></li>
+      <li><router-link to="/pageUnderConstruction">Trenuj</router-link></li>
+      <li><router-link to="/gameScreen">Hraj</router-link></li>
       <li><router-link to="/contact-us">Napiš nám</router-link></li>
     </ul>
   </div>

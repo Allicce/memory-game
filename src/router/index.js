@@ -6,6 +6,7 @@ import WelcomePage from '../views/WelcomePage'
 import UsersResults from '../views/UsersResults'
 import ContactUs from '../views/ContactUs'
 import Results from '../views/Results'
+import PageUnderConstruction from '../views/PageUnderConstruction'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/results',
     name: 'results',
     component: Results
+  },
+  {
+    path: '/pageUnderConstruction',
+    name: 'pageUnderConstruction',
+    component: PageUnderConstruction
   }
 ]
 
