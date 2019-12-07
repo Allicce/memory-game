@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="container">
       <h1>Uzivatel pise vysledok</h1>
-      <div>
+      <div class="input_container">
         <Input v-for="index in 6" :key="index"/>
       </div>
       <Button class="button" name="Výsledok" routeTo="/results"/>
@@ -24,5 +24,14 @@ export default {
 </script>
 
 <style scoped>
+
+  .input_container{
+    width: 80vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
 
 </style>

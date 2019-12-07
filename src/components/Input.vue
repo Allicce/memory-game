@@ -1,9 +1,11 @@
 <template>
-    <div>
+    <div class="container">
       <p v-if="alert"> Musí to byť číslo</p>
-      <input v-model="inputNumber"
-      @change="addNumber"
-      type="number"/>
+      <div class="input_container">
+        <input v-model="inputNumber"
+        @change="addNumber"
+        type="number"/>
+      </div>
     </div>
 </template>
 
@@ -40,5 +42,27 @@ export default {
 </script>
 
 <style scoped>
+  .container{
+  }
+  .input_container{
+    width: 100px;
+  }
+  input {
+    width: 100%;
+    display: block;
+    background-color: #041F1E;
+    color: white;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5%;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
 </style>
