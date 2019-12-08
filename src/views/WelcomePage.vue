@@ -162,4 +162,27 @@ export default {
     }
   }
 
+  @media(min-width: 1200px) {
+    .text {
+      padding: 5% 0 0 0;
+    }
+
+    h1 {
+      font-size: 4em;
+    }
+
+    .description {
+      padding: 5% 0 0 0;
+      font-size: 1.2em;
+    }
+
+    .monster {
+      width: 15vw;
+    }
+
+    .container_button {
+      padding: 5% 0 ;
+    }
+  }
+
 </style>
