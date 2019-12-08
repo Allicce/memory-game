@@ -3,11 +3,14 @@
     <heading />
     <div class="text">
       <h1>Objav čo tvoja pamäť dokáže</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
         necessitatibus provident a totam dolore neque error nobis architecto accusamus molestiae eius iste unde
       </p>
     </div>
     <div class="container_button">
+      <div class="monster_mobile">
+        <img src="../../public/Charac_F-F2-idle_0.png" alt="monster">
+      </div>
       <div class="monster left">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
@@ -37,6 +40,11 @@ export default {
 </script>
 
 <style scoped>
+  .container {
+    background-image: url("../../public/backgroundImage.png");
+    background-size: 100%;
+    background-position: left top;
+  }
 
   .container {
     display: flex;
@@ -49,8 +57,14 @@ export default {
   }
 
   .text {
+    opacity: 1;
+    padding-top: 10%;
     width: 60vw;
     margin: auto;
+  }
+
+  .description {
+    padding-top: 10%;
   }
 
   nav li {
@@ -59,30 +73,62 @@ export default {
   }
 
   h1 {
-    font-size: 5em;
+    padding-top: 10%;
+    font-size: 2em;
   }
 
   a {
     display: inline-block;
   }
-
   .monster {
+    display: none;
+  }
+
+  .monster_mobile {
     width: 20vw;
-    padding-left: 2%;
+    position: relative;
+    bottom: -10px;
   }
 
-  .right img {
-    transform: scaleX(-1);
-  }
-
-  img {
+  .monster_mobile  img{
+    display: block;
     width: 100%;
+    height: auto;
   }
 
-  .container_button {
-    width: 80vw;
-    display: flex;
-   justify-content: space-between;
+  @media(min-width: 700px) {
+    .text {
+      width: 60vw;
+    }
+
+    h1 {
+      font-size: 5em;
+    }
+
+    .description {
+      font-size: 1.5em;
+    }
+
+    .monster {
+      display: block;
+      width: 20vw;
+      padding-left: 2%;
+    }
+
+    .right img {
+      transform: scaleX(-1);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .container_button {
+      width: 80vw;
+      display: flex;
+      justify-content: space-between;
+    }
+
   }
 
 </style>
