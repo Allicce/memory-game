@@ -14,8 +14,8 @@
       <div class="monster left">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
-      <Button class="button" name="hraj" routeTo="/gameScreen"/>
-      <Button class="button" name="Trenuj" routeTo="/pageUnderConstruction"/>
+      <Button class="button_left button" name="hraj" routeTo="/gameScreen"/>
+      <Button class="button_right button " name="Trenuj" routeTo="/pageUnderConstruction"/>
       <div class="monster right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
@@ -57,7 +57,6 @@ export default {
   }
 
   .text {
-    opacity: 1;
     padding-top: 10%;
     width: 60vw;
     margin: auto;
@@ -97,16 +96,25 @@ export default {
   }
 
   @media(min-width: 700px) {
+    .monster_mobile {
+      display: none;
+    }
+
     .text {
-      width: 60vw;
+      width: 80vw;
     }
 
     h1 {
+      width: 80%;
+      margin: auto;
+      padding: 0;
       font-size: 5em;
     }
 
     .description {
       font-size: 1.5em;
+      margin: 0;
+      padding: 7% 0;
     }
 
     .monster {
@@ -124,11 +132,34 @@ export default {
     }
 
     .container_button {
-      width: 80vw;
-      display: flex;
+      width: 90vw;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+      align-items: center;
       justify-content: space-between;
     }
 
+    .button {
+      width: 10vw;
+    }
+
+    .left {
+      grid-column: 1 / span 2;
+    }
+
+    .right {
+      grid-column: 7 / span 2;
+    }
+
+    .button_left {
+      grid-column: 3 / span 2;
+
+    }
+
+    .button_right {
+      grid-column: 5 / span 2;
+    }
   }
 
 </style>
