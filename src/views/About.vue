@@ -2,9 +2,7 @@
   <div class="about">
     <heading />
     <h1>O nás</h1>
-    <profile title="O hře"/>
-    <profile title="Bětka" class="change" />
-    <profile title="Katka"/>
+    <profile />
   </div>
 </template>
 
@@ -15,12 +13,11 @@ export default {
   components: {
     heading: Header,
     profile: Profile
+  },
+  mounted () {
+    this.$store.dispatch('loadProfiles')
   }
 }
 </script>
 <style>
-.change {
-    flex-direction: column-reverse;
-    background-color: rgb(230, 255, 248);
-}
 </style>
