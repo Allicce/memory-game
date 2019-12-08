@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div class="monster">
+      <img src="../../public/Charac_F-F2-idle_0.png">
+    </div>
     <h1 v-for="(number, index) in numbers" :key="index">
       {{number}}
     </h1>
@@ -38,15 +41,16 @@ export default {
   .container {
     width: 90vw;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    justify-content: center;
     padding-top: 15%;
   }
 
   h1 {
-    min-width: 100px;
-    max-width: 100px;
+    justify-self: center;
+    min-width: 30vw;
+    max-width: 30vw;
     background-color: #041F1E;
     padding: 0 10px;
     border-radius: 5%;
@@ -56,28 +60,43 @@ export default {
     margin: 3% 3% 0 0;
   }
 
-  @media(min-width: 435px) {
-    h1{
-      min-width: 120px;
-      max-width: 120px;
-      padding: 0 20px;
-    }
-
+  .monster {
+    justify-self: center;
+    position: relative;
+    bottom: -30px;
+    grid-column: 2;
+    width: 20vw;
   }
 
-  @media(min-width: 570px) {
-    h1{
-      min-width: 190px;
-      max-width: 190px;
-      padding: 0 20px;
-      font-size: 2.5em;
-    }
+  .monster img {
+    width: 100%;
   }
 
-  @media(min-width: 700px) {
+  @media(min-width: 700px ) {
     .container{
-      width: 70vw;
+      width: 60vw;
+      padding: 20%;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
 
+    h1{
+      min-width: 15vw;
+      max-width: 15vw;
+      padding: 0 10px;
+      font-size: 1.5em;
+    }
+
+    .monster {
+      grid-column: 3;
+      width: 10vw;
+    }
+
+  }
+
+  @media(min-width: 1200px) {
+
+    .monster {
+      bottom: -40px;
     }
 
   }
