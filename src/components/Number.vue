@@ -34,18 +34,52 @@ export default {
 </script>
 
 <style scoped>
-  .container{
-    width: 70vw;
+
+  .container {
+    width: 90vw;
     margin: auto;
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    padding-top: 15%;
   }
 
   h1 {
+    min-width: 100px;
+    max-width: 100px;
     background-color: #041F1E;
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 5%;
     color: white;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 3% 3% 0 0;
   }
+
+  @media(min-width: 435px) {
+    h1{
+      min-width: 120px;
+      max-width: 120px;
+      padding: 0 20px;
+    }
+
+  }
+
+  @media(min-width: 570px) {
+    h1{
+      min-width: 190px;
+      max-width: 190px;
+      padding: 0 20px;
+      font-size: 2.5em;
+    }
+  }
+
+  @media(min-width: 700px) {
+    .container{
+      width: 70vw;
+
+    }
+
+  }
+
 </style>

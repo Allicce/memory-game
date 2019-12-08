@@ -13,7 +13,7 @@ export default {
 <style scoped>
   .home {
     text-decoration: none;
-    color: #42b983;
+    color: #041F1E;
   }
 
 </style>

@@ -73,9 +73,9 @@ export default {
     this.tick = setInterval(() => {
       this.now = DateTime.local()
     }, 10)
-    this.timeout = setTimeout(() => {
+    /* this.timeout = setTimeout(() => {
       this.$router.push('/gameScreen/usersResults')
-    }, 15000)
+    }, 15000) */
   },
   destroyed () {
     console.log('clearTimeout')
@@ -88,7 +88,7 @@ export default {
  @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
  html, body, main {
-      width: 10vw;
+      width: 20vw;
  }
 
  body {
