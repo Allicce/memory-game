@@ -40,11 +40,6 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    background-image: url("../../public/backgroundImage.png");
-    background-size: 100%;
-    background-position: left top;
-  }
 
   .container {
     display: flex;

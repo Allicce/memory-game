@@ -1,11 +1,8 @@
 <template>
     <div class="container">
-      <p v-if="alert"> Musí to byť číslo</p>
-      <div class="input_container">
-        <input v-model="inputNumber"
-        @change="addNumber"
-        type="number" autofocus/>
-      </div>
+      <input v-model="inputNumber"
+      @change="addNumber"
+      type="number" autofocus/>
     </div>
 </template>
 
@@ -52,26 +49,35 @@ export default {
 
 <style scoped>
   .container{
+    margin-top: 5%;
   }
-  .input_container{
-    width: 100px;
-  }
+
   input {
-    width: 100%;
+    min-width: 30vw;
+    max-width: 30vw;
     display: block;
     background-color: #041F1E;
     color: white;
-    padding: 0 20px;
     border: none;
     border-radius: 5%;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
+    padding: 5% 0;
   }
 
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  @media(min-width: 700px) {
+    input {
+      min-width: 15vw;
+      max-width: 15vw;
+      font-size: 1.5em;
+    }
+
   }
 
 </style>

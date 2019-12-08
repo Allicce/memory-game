@@ -34,10 +34,6 @@ export default {
   }
 
   .container_screen {
-    width: 100%;
-    background-image: url("../../public/backgroundImage.png");
-    background-size: 100%;
-    background-position: left top;
     display: flex;
     flex-wrap: wrap;
   }
