@@ -15,10 +15,18 @@
     </div>
 
     <div v-show="isEqual">
-      <Button class="button margin-5" name="pokračuj" routeTo="/gameScreen"/>
+      <Button class="button margin-5"
+              name="pokračuj"
+              routeTo="/gameScreen"
+              @click="nextLevel"
+      />
     </div>
     <div v-show="!isEqual">
-      <Button class="button" name="hraj znova!" routeTo="/gameScreen"/>
+      <Button class="button"
+              name="hraj znova!"
+              routeTo="/gameScreen"
+              @click="resetToFirstLevel"
+      />
     </div>
   </div>
 </template>
@@ -50,14 +58,25 @@ export default {
   },
   methods: {
     ...mapActions([
-      'getDefaultState'
+      'getDefaultState',
+      'resetLevels',
+      'incrementActualLevel'
+
     ]),
     resetUsersNumber () {
       this.getDefaultState()
+    },
+    resetToFirstLevel () {
+      this.resetLevels()
+    },
+    nextLevel () {
+      this.incrementActualLevel()
     }
 
   },
   created () {
+    console.log(this.watchNumber)
+    console.log(this.usersNumber)
     this.isEqual = _.isEqual(this.watchNumber, this.usersNumber)
   },
   destroyed () {

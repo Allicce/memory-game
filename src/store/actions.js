@@ -9,5 +9,13 @@ export default {
 
   getDefaultState: ({ commit }) => {
     commit('resetToDefault', [])
+  },
+
+  incrementActualLevel: ({ commit }) => {
+    commit('incrementLevel')
+  },
+
+  resetLevels: ({ commit }) => {
+    commit('getFirstLevel')
   }
 }

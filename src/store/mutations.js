@@ -9,5 +9,13 @@ export default {
 
   resetToDefault: (state, payload) => {
     state.usersNumber = payload
+  },
+
+  incrementLevel: (state) => {
+    state.actualLevel++
+  },
+
+  getFirstLevel: (state) => {
+    state.actualLevel = 1
   }
 }

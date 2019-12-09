@@ -39,6 +39,8 @@ export default {
     ]),
     addNumber () {
       const index = this.inputIndex - 1
+      this.number = this.number.trim()
+      this.number = parseInt(this.number)
       const object = { number: this.number,
         index: index }
       this.addUserArray(object)

@@ -5,6 +5,7 @@
       <Timer class="timer"></Timer>
     </div>
     <div class="text">
+      <h1> Level {{ actualLevel }}</h1>
       <p> Zapamätaj si všetky čísla v presnom poradí</p>
     </div>
     <Number class="number"></Number>
@@ -16,6 +17,7 @@
 import Timer from '../components/Timer.vue'
 import Number from '../components/Number'
 import ReturnToHomePage from '../components/ReturnToHomePage'
+import { mapState } from 'vuex'
 
 export default {
   name: 'GameScreen',
@@ -23,6 +25,11 @@ export default {
     'Timer': Timer,
     Number,
     ReturnToHomePage
+  },
+  computed: {
+    ...mapState([
+      'actualLevel'
+    ])
   }
 }
 </script>

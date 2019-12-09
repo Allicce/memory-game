@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'Number',
@@ -19,13 +19,20 @@ export default {
       numbers: []
     }
   },
+  computed: {
+    ...mapState([
+      'actualLevel'
+    ])
+  },
   methods: {
     ...mapActions([
       'addArray'
     ]),
     randomNumber () {
-      for (let i = 0; i <= 5; i++) {
-        this.numbers[i] = parseInt(Math.random() * 300 + 1)
+      if (this.actualLevel >= 1 && this.actualLevel <= 5) {
+        for (let i = 0; i <= 5; i++) {
+          this.numbers[i] = parseInt(Math.random() * 9 + 1)
+        }
       }
       this.addArray(this.numbers)
     }
