@@ -52,7 +52,9 @@ export default {
   computed: {
     ...mapState([
       'watchNumber',
-      'usersNumber'
+      'usersNumber',
+      'totalLevel',
+      'actualLevel'
     ])
   },
   methods: {
@@ -69,7 +71,12 @@ export default {
       this.resetLevels()
     },
     nextLevel () {
-      this.incrementActualLevel()
+      if (this.actualLevel === this.totalLevel) {
+        this.resetToFirstLevel()
+        this.$router.push('/endGame')
+      } else {
+        this.incrementActualLevel()
+      }
     },
     goToPath (path) {
       this.$router.push(path)
