@@ -18,14 +18,13 @@
       <Button class="button margin-5"
               name="pokračuj"
               routeTo="/gameScreen"
-              @click="nextLevel"
+
       />
     </div>
     <div v-show="!isEqual">
       <Button class="button"
               name="hraj znova!"
               routeTo="/gameScreen"
-              @click="resetToFirstLevel"
       />
     </div>
   </div>
@@ -81,6 +80,11 @@ export default {
   },
   destroyed () {
     this.resetUsersNumber()
+    if (this.isEqual) {
+      this.nextLevel()
+    } else {
+      this.resetToFirstLevel()
+    }
   }
 }
 </script>

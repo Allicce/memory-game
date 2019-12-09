@@ -1,6 +1,6 @@
 export default {
   watchNumber: [],
   usersNumber: [],
-  totalLevel: 5,
+  totalLevel: 15,
   actualLevel: 1
 }

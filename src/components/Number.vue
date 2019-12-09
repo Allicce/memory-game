@@ -33,6 +33,12 @@ export default {
         for (let i = 0; i <= 5; i++) {
           this.numbers[i] = parseInt(Math.random() * 9 + 1)
         }
+      } else if (this.actualLevel >= 6 && this.actualLevel <= 10) {
+        for (let i = 0; i <= 5; i++) {
+          this.numbers[i] = parseInt(Math.random() * 99 + 1)
+        }
+      } else if (this.actualLevel >= 11 && this.actualLevel <= 15) {
+        this.numbers[i] = parseInt(Math.random() * 300 + 1)
       }
       this.addArray(this.numbers)
     }
