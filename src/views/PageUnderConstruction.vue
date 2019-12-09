@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <h1>Page under construction</h1>
+  <div class="container">
+    <div class="text">
+      <h1>Na stránke</h1>
+      <h2>sa pracuje</h2>
+    </div>
   </div>
 </template>
 
@@ -11,5 +14,16 @@ export default {
 </script>
 
 <style scoped>
+  .text {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .text h1 {
+    margin-top: 10%;
+  }
 
 </style>
