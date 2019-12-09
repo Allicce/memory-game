@@ -38,7 +38,9 @@ export default {
           this.numbers[i] = parseInt(Math.random() * 99 + 1)
         }
       } else if (this.actualLevel >= 11 && this.actualLevel <= 15) {
-        this.numbers[i] = parseInt(Math.random() * 300 + 1)
+        for (let i = 0; i <= 5; i++) {
+          this.numbers[i] = parseInt(Math.random() * 300 + 1)
+        }
       }
       this.addArray(this.numbers)
     }
