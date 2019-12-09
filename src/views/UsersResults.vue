@@ -6,7 +6,7 @@
         <Input v-for="index in 6" :key="index" :inputIndex="index" class="input_element"
         />
       </div>
-      <Button class="button" name="Výsledok" routeTo="/results"/>
+      <Button class="button" name="Výsledok" @click.native="goToPath('/results')"/>
     </div>
 
 </template>
@@ -25,9 +25,10 @@ export default {
     return {
     }
   },
-  computed: {
-  },
   methods: {
+    goToPath (path) {
+      this.$router.push(path)
+    }
   }
 }
 </script>

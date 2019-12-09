@@ -14,8 +14,8 @@
       <div class="monster left">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
-      <Button class="button_left button" name="hraj" routeTo="/gameScreen"/>
-      <Button class="button_right button " name="Trenuj" routeTo="/pageUnderConstruction"/>
+      <Button class="button_left button" name="hraj" @click.native="goToPath('/gameScreen')"/>
+      <Button class="button_right button " name="Trenuj" @click.native="goToPath('/pageUnderConstruction')"/>
       <div class="monster right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
@@ -35,6 +35,11 @@ export default {
     Button,
     'heading': Header
 
+  },
+  methods: {
+    goToPath (path) {
+      this.$router.push(path)
+    }
   }
 }
 </script>

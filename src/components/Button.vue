@@ -1,7 +1,6 @@
 <template>
   <div class="button_cont">
-    <p class="green_button"
-       @click="pressButton(routeTo)">{{name}}</p>
+    <p class="green_button">{{name}}</p>
   </div>
 
 </template>
@@ -11,14 +10,8 @@
 export default {
   name: 'button',
   props: [
-    'name',
-    'routeTo'
-  ],
-  methods: {
-    pressButton (path) {
-      this.$router.push(path)
-    }
-  }
+    'name'
+  ]
 }
 </script>
 
