@@ -85,8 +85,10 @@ export default {
 
 <style>
 .monster {
-    width: 100px;
-    position: relative;
+width: 100px;
+position: absolute;
+top: 185px;
+background-color: transparent;
 }
 .contact-form {
 font-family: 16px;
@@ -145,5 +147,17 @@ box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5)
 .contact-form .button {
 font-size: 15px;
 border-radius: 3px
+}
+
+@media (max-width: 550px) {
+  .monster {
+    display: none;
+  }
+  .contact-form {
+    width: 300px;
+  }
+  .contact-form h3 {
+    font-size: 18px;
+  }
 }
 </style>
