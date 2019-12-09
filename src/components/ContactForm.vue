@@ -1,7 +1,8 @@
 <template>
 <div>
   <div id="contact-form" class="contact-form">
-        <h3 class="contact-form_title">Kontatní formulář</h3>
+      <img src="/Characs_F-F2-Idle.gif" alt="greenmonster" class="monster">
+        <h3 class="contact-form_title">Kontaktní formulář</h3>
         <div class="separator"></div>
 
         <div v-if="isSending" class="loading">Odesílám...</div>
@@ -83,6 +84,10 @@ export default {
 </script>
 
 <style>
+.monster {
+    width: 100px;
+    position: relative;
+}
 .contact-form {
 font-family: 16px;
 margin: 0 auto;
