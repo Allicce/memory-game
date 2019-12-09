@@ -5,6 +5,9 @@ import GameScreen from '../views/GameScreen'
 import WelcomePage from '../views/WelcomePage'
 import UsersResults from '../views/UsersResults'
 import ContactUs from '../views/ContactUs'
+import Results from '../views/Results'
+import PageUnderConstruction from '../views/PageUnderConstruction'
+import EndGame from '../views/EndGame'
 
 Vue.use(VueRouter)
 
@@ -33,6 +36,21 @@ const routes = [
     path: '/contact-us',
     name: 'contactUs',
     component: ContactUs
+  },
+  {
+    path: '/results',
+    name: 'results',
+    component: Results
+  },
+  {
+    path: '/pageUnderConstruction',
+    name: 'pageUnderConstruction',
+    component: PageUnderConstruction
+  },
+  {
+    path: '/endGame',
+    name: 'endGame',
+    component: EndGame
   }
 ]
 

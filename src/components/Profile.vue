@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <div class="picture">obrázek</div>
+    <div class="picture">{{ picture }}</div>
     <div class="text">
-      <h2>Jméno</h2>
-      text
+      <h2>{{ title }}</h2>
+      <div v-html="content">{{ text }}</div>
     </div>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  props: ['title', 'picture', 'text']
+}
 </script>
 <style scoped>
 .container {
@@ -20,7 +22,7 @@ export default {}
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .picture {
   flex: 1 1 50%;

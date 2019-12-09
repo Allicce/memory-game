@@ -1,3 +1,6 @@
 export default {
-  watchNumber: []
+  watchNumber: [],
+  usersNumber: [],
+  totalLevel: 15,
+  actualLevel: 1
 }
