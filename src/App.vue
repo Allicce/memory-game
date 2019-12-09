@@ -5,7 +5,7 @@
       <router-link to="/gameScreen">Game Screen</router-link>
     </div>-->
     <router-view/>
-  </div>
+   </div>
 </template>
 <script>
 export default {

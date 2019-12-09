@@ -38,14 +38,17 @@
         <button class="button">Send</button>
       </form>
     </div>
+    <footing />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer'
 export default {
   components: {
-    heading: Header
+    heading: Header,
+    'footing': Footer
   },
   data () {
     return {
