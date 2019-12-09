@@ -25,8 +25,7 @@ export default {
 <style scoped>
 
   .button_cont {
-    margin: 5%;
-    padding: 10% 5% 0 5%;
+    padding: 0 5% 0 5%;
   }
 
   .green_button {

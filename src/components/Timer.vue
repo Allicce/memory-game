@@ -1,8 +1,7 @@
 <template>
      <main id="clock">
-          <template v-if="finished">
-            <!-- <router-link :to="`/gameScreen/usersResults`"></router-link> -->
-            BOOM
+          <template v-if="finished" >
+
           </template>
           <template v-else>
                <time :style="gradient" class="timer">
@@ -58,9 +57,9 @@ export default {
     },
     changeColor () {
       if (this.isEndThreeSeconds) {
-        return 'lightblue'
+        return '#42b983'
       } else {
-        return 'red'
+        return '#D53738'
       }
     },
     gradient () {
@@ -73,6 +72,9 @@ export default {
     this.tick = setInterval(() => {
       this.now = DateTime.local()
     }, 10)
+    setTimeout(() => {
+      this.$router.push('/gameScreen/usersResults')
+    }, 15000)
   }
 }
 </script>
@@ -81,12 +83,10 @@ export default {
  @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
  html, body, main {
-      height: 100%;
-      width: 100%;
+      width: 10vw;
  }
 
  body {
-      /*background: black;*/
       color: #D53738;
       font: 7vh 'Orbitron', sans-serif;
  }
@@ -94,7 +94,7 @@ export default {
  main {
       align-items: center;
       display: flex;
-      justify-content: center;
+      justify-content: end;
  }
 
  time {
@@ -104,9 +104,9 @@ export default {
  }
 
  .timer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .time_container {
@@ -115,7 +115,7 @@ export default {
 
  .flicking {
       -webkit-animation: flicker 2s infinite;
-      color: red;
+      color: #D53738;
  }
 
  @-webkit-keyframes flicker {
