@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
   .green_button {
-    margin-top: 0;
+    margin: auto;
     width: 80vw;
     color: #fff !important;
     text-transform: uppercase;
