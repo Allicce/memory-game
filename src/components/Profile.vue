@@ -1,17 +1,24 @@
 <template>
   <div class="container">
-    <div class="picture">{{ picture }}</div>
+    <div class="picture"><img :src="image_src"></div>
     <div class="text">
       <h2>{{ title }}</h2>
-      <div v-html="content">{{ text }}</div>
+      <div>{{ text }}</div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  props: ['title', 'picture', 'text']
+  props: ['title', 'image', 'text'],
+  data () {
+    return {
+      image_src: require(`../../public/${this.image}`)
+    }
+  }
 }
 </script>
+
 <style scoped>
 .container {
   display: flex;
@@ -25,12 +32,17 @@ export default {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .picture {
-  flex: 1 1 50%;
+  flex: 0 1 50%;
 }
 .text {
   flex: 1 1 50%;
+  padding: 0 10%;
 }
 .change {
   flex-direction: row-reverse;
 }
+  img {
+    width: 50%;
+    padding: 0 10%;
+  }
 </style>
