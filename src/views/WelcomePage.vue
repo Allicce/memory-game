@@ -20,6 +20,7 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
     </div>
+    <footing />
   </div>
 
 </template>
@@ -28,12 +29,14 @@
 // @ is an alias to /src
 import Button from '../components/Button.vue'
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer'
 
 export default {
   name: 'home',
   components: {
     Button,
-    'heading': Header
+    'heading': Header,
+      'footing': Footer
 
   },
   methods: {

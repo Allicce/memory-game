@@ -1,0 +1,22 @@
+{
+    "profiles": [
+        {
+            "id": 1,
+            "name": "Czechitas",
+            "text": "Lorem ipsum lorem ipsum lorem ipsum",
+            "photo": "czechitas.png"
+        },
+        {
+            "id": 2,
+            "name": "Bětka",
+            "text": "Lorem ipsum lorem ipsum lorem ipsum",
+            "photo": "betka.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Katka",
+            "text": "Lorem ipsum lorem ipsum lorem ipsum",
+            "photo": "katka.jpg"
+        }
+    ]
+}

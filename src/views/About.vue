@@ -38,16 +38,22 @@
              ut tortor pretium viverra suspendisse. Ut sem nulla pharetra diam sit. Cursus vitae congue mauris
              rhoncus aenean vel elit. Massa enim nec dui nunc mattis enim ut."
     />
+    <footing />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
 import Profile from '../components/Profile.vue'
+import Footer from '../components/Footer'
 export default {
   components: {
     heading: Header,
-    profile: Profile
+    profile: Profile,
+    'footing': Footer
+  },
+  mounted () {
+    this.$store.dispatch('loadProfiles')
   }
 }
 </script>
