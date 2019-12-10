@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-<div class="logo"> <router-link to="/"><h1>KAŠdesign</h1></router-link></div>
+<div class="logo"> <img src="../../public/Logo.png" @click="goToPath('/')"></div>
 <navigation />
 </div>
 </template>
@@ -11,6 +11,11 @@ import Menu from './Menu.vue'
 export default {
   components: {
     'navigation': Menu
+  },
+  methods: {
+    goToPath (path) {
+      this.$router.push(path)
+    }
   }
 }
 </script>
@@ -29,11 +34,10 @@ h1 {
   margin-top: 15px
   }
 .logo {
-  height: 53px;
+  width: 20vw;
   padding: auto;
 }
-a {
-  color: whitesmoke;
-  text-decoration: none;
+img {
+  width: 100%;
 }
 </style>
