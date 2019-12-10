@@ -36,7 +36,7 @@ export default {
   components: {
     Button,
     'heading': Header,
-      'footing': Footer
+    'footing': Footer
 
   },
   methods: {
