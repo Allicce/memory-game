@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <heading />
+    <main>
     <div class="text">
       <h1>Objav čo tvoja pamäť dokáže</h1>
       <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
@@ -20,7 +21,8 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
     </div>
-    <footing />
+    </main>
+    <footing class="footer" />
   </div>
 
 </template>
@@ -48,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+main {
+  margin-bottom: 50px;
+}
 
   .container {
     display: flex;
@@ -57,6 +62,8 @@ export default {
     color:  #041F1E;
     text-align: center;
     flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
   }
 
   .text {
@@ -96,6 +103,11 @@ export default {
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
   }
 
   @media(min-width: 700px) {

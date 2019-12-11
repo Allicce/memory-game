@@ -22,11 +22,13 @@ export default {
 <style scoped>
 .container {
   display: flex;
+  flex-direction: column;
   padding: 30px;
   border: 1px solid rgb(231, 231, 231);
   border-radius: 10px;
   width: 85%;
-  margin: 10px 50px 10px 50px;
+  margin: auto;
+  margin-top: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .picture {
@@ -39,12 +41,21 @@ h2 {
   flex: 1 1 50%;
   padding: 0 10%;
 }
-.change {
-    flex-direction: row-reverse;
-    background-color: rgb(204, 255, 207);
-}
   img {
     width: 50%;
     padding: 0 10%;
   }
+
+  .change {
+    background-color: rgb(204, 255, 207);
+  }
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+  }
+  .change {
+    flex-direction: row-reverse;
+  }
+}
 </style>
