@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
     <ul>
+      <li><router-link to="/dragAndDrop">Drag and drop</router-link></li>
       <li><router-link to="/about">O nás</router-link></li>
       <li><router-link to="/pageUnderConstruction">Trenuj</router-link></li>
       <li><router-link to="/gameScreen">Hraj</router-link></li>
