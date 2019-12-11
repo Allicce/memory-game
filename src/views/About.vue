@@ -2,6 +2,7 @@
   <div class="about">
     <heading />
     <h1>O nás</h1>
+    <main>
     <profile title="O hře"
              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -38,6 +39,7 @@
              ut tortor pretium viverra suspendisse. Ut sem nulla pharetra diam sit. Cursus vitae congue mauris
              rhoncus aenean vel elit. Massa enim nec dui nunc mattis enim ut."
     />
+    </main>
     <footing />
   </div>
 </template>
@@ -58,8 +60,7 @@ export default {
 }
 </script>
 <style>
-.change {
-    flex-direction: column-reverse;
-    background-color: rgb(230, 255, 248);
+main {
+  margin-bottom: 20px;
 }
 </style>

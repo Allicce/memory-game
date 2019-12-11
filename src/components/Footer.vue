@@ -17,9 +17,11 @@ export default {
     display: flex;
     background-color: #041F1E;
     color: whitesmoke;
-    font-size: 10px;
+    font-size: 9px;
     width: 100%;
-    height: 45px;
+    height: 35px;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
 }
 </style>

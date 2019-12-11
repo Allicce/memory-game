@@ -1,7 +1,7 @@
 <template>
 <div>
   <div id="contact-form" class="contact-form">
-      <img src="/Characs_F-F2-Idle.gif" alt="greenmonster" class="monster">
+      <img src="/Charac_F-F2-idle_0.png" alt="greenmonster" class="monster">
         <h3 class="contact-form_title">Kontaktní formulář</h3>
         <div class="separator"></div>
 
@@ -30,7 +30,7 @@
             rows="4"
             placeholder="Sem napiš zprávu"
           ></textarea>
-          <button class="button">Send</button>
+          <button class="button">Odeslat</button>
         </form>
       </div>
     </div>
@@ -85,9 +85,10 @@ export default {
 
 <style>
 .monster {
-width: 100px;
+width: 75px;
 position: absolute;
-top: 185px;
+top: 0px;
+right: 20%;
 background-color: transparent;
 }
 .contact-form {
@@ -95,6 +96,7 @@ font-family: 16px;
 margin: 0 auto;
 max-width: 600px;
 width: 100%;
+position: relative;
 }
 
 .contact-form .separator {

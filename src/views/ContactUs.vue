@@ -29,6 +29,10 @@ export default {
 </script>
 
 <style scoped>
+.ContactUs {
+  position: relative;
+  min-height: 100vh;
+}
 .footer {
   position: absolute;
   bottom: 0;
