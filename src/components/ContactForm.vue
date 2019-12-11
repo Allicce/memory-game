@@ -30,7 +30,7 @@
             rows="4"
             placeholder="Sem napiš zprávu"
           ></textarea>
-          <button class="button">Send</button>
+          <button class="button">Odeslat</button>
         </form>
       </div>
     </div>
