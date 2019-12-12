@@ -8,23 +8,32 @@
       <h1 class="mistake">Chyba</h1>
     </div>
     <div v-show="actualLevel >= 1 && actualLevel <= 5">
-      <p>Zobrazené obrázky</p>
-      <div v-for="(list, index) in watchPictures" :key="index">
-        <div class="container_item">
-          <div v-for="item in list"
-               :key="item"
-               class ="item"
-               :class="{ [item]: true }">
+      <div class="text_container">
+        <p>Zobrazené obrázky</p>
+        <p>Tvoje obrázky</p>
+      </div>
+
+      <div class="flex_container">
+        <div class="grid">
+          <div v-for="(list, index) in watchPictures" :key="index" class="flex_container_item">
+            <div class="container_item">
+              <div v-for="item in list"
+                   :key="item"
+                   class ="item"
+                   :class="{ [item]: true }">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <p>Tvoje obrázky</p>
-      <div v-for="(list, index) in userResults" :key="index">
-        <div class="container_item">
-          <div v-for="item in list"
-               :key="item"
-               class ="item"
-               :class="{ [item]: true }">
+        <div class="grid">
+          <div v-for="(list, index) in userResults" :key="index">
+            <div class="container_item">
+              <div v-for="item in list"
+                   :key="item"
+                   class ="item"
+                   :class="{ [item]: true }">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -188,8 +197,8 @@ export default {
     margin-bottom: 20px;
     width: auto;
     height: auto;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 140px;
+    min-height: 140px;
     background-color: #041F1E;
   }
 
@@ -218,6 +227,29 @@ export default {
   .item.J { background-image: url("../../public/Charac_F-F1-idle_0_foot.png") }
   .item.K { background-image: url("../../public/Charac_F-F2-idle_0_foot.png") }
   .item.L { background-image: url("../../public/Charac_F-F03-Idle_0_foot.png") }
+
+  .flex_container {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex_container_item {
+    flex: 1 1 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  .text_container {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 
   @media(min-width: 700px) {
     .container {
