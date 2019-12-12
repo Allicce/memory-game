@@ -117,9 +117,11 @@ export default {
 
   },
   created () {
-    console.log(this.watchNumber)
-    console.log(this.usersNumber)
-    this.isEqual = _.isEqual(this.watchNumber, this.usersNumber)
+    if (this.actualLevel >= 1 && this.actualLevel <= 5) {
+      this.isEqual = _.isEqual(this.watchPictures, this.userResults)
+    } else {
+      this.isEqual = _.isEqual(this.watchNumber, this.usersNumber)
+    }
   },
   destroyed () {
     this.resetUsersNumber()
