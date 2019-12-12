@@ -24,8 +24,8 @@ export default {
       lists: [
         ['A', 'B', 'C'],
         ['D', 'E', 'F'],
-        [],
-        [],
+        ['G', 'H', 'I'],
+        ['J', 'K', 'L'],
         []
       ]
     }
@@ -65,15 +65,14 @@ export default {
   .drag {
     color: #fff;
     cursor: move;
-    background: #777;
+    background: whitesmoke;
     border-right: 2px solid #666;
     border-bottom: 2px solid #666;
   }
 
   .drop {
-    background: #eee;
-    border-top: 2px solid #ccc;
-    border-left: 2px solid #ddd;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
   }
 
   .drag {
@@ -82,12 +81,20 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .drag.A { background-image: url("../../public/Charac_F-F2-idle_0.png") }
   .drag.B { background-image: url("../../public/Charac_F-F1-idle_0.png") }
   .drag.C { background-image: url("../../public/Charac_F-F03-Idle_0.png") }
   .drag.D { background-image: url("../../public/Charac_S-F2-Idle_0.png") }
   .drag.E { background-image: url("../../public/Charac_S-F1-Idle_5.png") }
   .drag.F { background-image: url("../../public/Charac_S-F03-Idle_5.png") }
+  .drag.G { background-image: url("../../public/Charac_S-F1-Idle_5_left.png") }
+  .drag.H { background-image: url("../../public/Charac_S-F2-Idle_0_left.png") }
+  .drag.I { background-image: url("../../public/Charac_S-F03-Idle_5_left.png") }
+  .drag.J { background-image: url("../../public/Charac_F-F1-idle_0_foot.png") }
+  .drag.K { background-image: url("../../public/Charac_F-F2-idle_0_foot.png") }
+  .drag.L { background-image: url("../../public/Charac_F-F03-Idle_0_foot.png") }
+
   .drop {
     display: inline-block;
     vertical-align: top;
@@ -100,6 +107,7 @@ export default {
   .list {
     min-width: 100px;
     min-height: 100px;
+    background-color: #041F1E;
   }
 
 </style>

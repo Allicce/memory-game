@@ -4,11 +4,20 @@
       <return-to-home-page class="home"></return-to-home-page>
       <Timer class="timer"></Timer>
     </div>
-    <div class="text">
-      <h1> Level {{ actualLevel }}</h1>
-      <p> Zapamätaj si všetky čísla v presnom poradí</p>
-    </div>
-    <Number class="number"></Number>
+    <v-show v-if="actualLevel >= 1 && actualLevel <= 5">
+      <div class="text">
+        <h1> Level {{ actualLevel }}</h1>
+        <p> Zapamätaj si všetky obrázky v presnom poradí</p>
+      </div>
+      <Picture/>
+    </v-show>
+    <v-show v-else>
+      <div class="text">
+        <h1> Level {{ actualLevel }}</h1>
+        <p> Zapamätaj si všetky čísla v presnom poradí</p>
+      </div>
+      <Number class="number"></Number>
+    </v-show>
   </div>
 
 </template>
@@ -17,6 +26,7 @@
 import Timer from '../components/Timer.vue'
 import Number from '../components/Number'
 import ReturnToHomePage from '../components/ReturnToHomePage'
+import Picture from '../components/Picture'
 import { mapState } from 'vuex'
 
 export default {
@@ -24,7 +34,8 @@ export default {
   components: {
     'Timer': Timer,
     Number,
-    ReturnToHomePage
+    ReturnToHomePage,
+    Picture
   },
   computed: {
     ...mapState([

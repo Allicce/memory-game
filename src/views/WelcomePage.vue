@@ -192,6 +192,7 @@ main {
     }
 
     .monster {
+      display: none;
       width: 15vw;
     }
 
