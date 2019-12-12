@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div v-for="(list, index) in watchPictures" :key="index">
       <div class="container_item">
         <div v-for="item in list"
@@ -39,6 +39,13 @@ export default {
 </script>
 
 <style scoped>
+  .container {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 140px));
+    justify-content: center;
+  }
   .item, .container_item {
     box-sizing: border-box;
     display: inline-block;
@@ -56,7 +63,8 @@ export default {
   }
 
   .container_item {
-    display: inline-block;
+
+    display: block;
     vertical-align: top;
     padding: 15px;
     margin-bottom: 20px;
@@ -92,5 +100,12 @@ export default {
   .item.J { background-image: url("../../public/Charac_F-F1-idle_0_foot.png") }
   .item.K { background-image: url("../../public/Charac_F-F2-idle_0_foot.png") }
   .item.L { background-image: url("../../public/Charac_F-F03-Idle_0_foot.png") }
+
+  @media(min-width: 700px) {
+    .container {
+      width: 60vw;
+      grid-template-columns: repeat(3, minmax(100px, 140px));
+    }
+  }
 
 </style>
