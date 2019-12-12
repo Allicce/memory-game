@@ -25,10 +25,15 @@ export default {
   },
   methods: {
     randomPicture () {
+      while (this.watchPictures.length > 0) {
+        this.watchPictures.pop()
+      }
+      console.log('create random picture')
       for (let i = 0; i < 6; i++) {
         let index = parseInt(Math.random() * 12)
         this.watchPictures.push([this.allPicture[index]])
       }
+      console.log(this.watchPictures)
     }
 
   },

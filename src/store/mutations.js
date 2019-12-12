@@ -9,6 +9,14 @@ export default {
 
   resetToDefault: (state, payload) => {
     state.usersNumber = payload
+    state.userResults = [
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
 
   incrementLevel: (state) => {

@@ -4,20 +4,20 @@
       <return-to-home-page class="home"></return-to-home-page>
       <Timer class="timer"></Timer>
     </div>
-    <v-show v-if="actualLevel >= 1 && actualLevel <= 5">
+    <div v-show="actualLevel >= 1 && actualLevel <= 5">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky obrázky v presnom poradí</p>
       </div>
       <Picture/>
-    </v-show>
-    <v-show v-else>
+    </div>
+    <div v-show="actualLevel >= 6">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky čísla v presnom poradí</p>
       </div>
       <Number class="number"></Number>
-    </v-show>
+    </div>
   </div>
 
 </template>

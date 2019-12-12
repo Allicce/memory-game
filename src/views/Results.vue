@@ -106,18 +106,18 @@ export default {
       'incrementActualLevel'
 
     ]),
-    resetUsersNumber () {
-      this.getDefaultState()
+    resetUsersInput () {
+      this.getDefaultState([])
     },
     resetToFirstLevel () {
-      this.resetLevels()
+      this.resetLevels([])
     },
     nextLevel () {
       if (this.actualLevel === this.totalLevel) {
         this.resetToFirstLevel()
         this.$router.push('/endGame')
       } else {
-        this.incrementActualLevel()
+        this.incrementActualLevel([])
       }
     },
     goToPath (path) {
@@ -132,8 +132,8 @@ export default {
       this.isEqual = _.isEqual(this.watchNumber, this.usersNumber)
     }
   },
-  destroyed () {
-    this.resetUsersNumber()
+  beforeDestroy () {
+    this.resetUsersInput()
   }
 }
 </script>

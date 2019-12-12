@@ -1,21 +1,21 @@
 <template>
     <div class="container">
       <h1>Výsledok</h1>
-      <v-show v-if="actualLevel >= 1 && actualLevel <= 5">
+      <div v-show="actualLevel >= 1 && actualLevel <= 5">
         <p>Presun obrazky do správneho poradia</p>
         <div class="container_user">
           <drag-and-drop></drag-and-drop>
         </div>
         <Button class="button" name="Výsledok" @click.native="goToPath('/results')"/>
-      </v-show>
-      <v-show v-else>
+      </div>
+      <div v-show="actualLevel > 5">
         <p>Do políčka zapíš čísla, ktoré si videl na predchádzajucej obrazovke</p>
         <div class="container_user">
           <Input v-for="index in 6" :key="index" :inputIndex="index" class="input_element"
           />
         </div>
         <Button class="button" name="Výsledok" @click.native="goToPath('/results')"/>
-      </v-show>
+      </div>
 
     </div>
 
