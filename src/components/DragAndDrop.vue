@@ -2,13 +2,24 @@
   <div class="container">
     <div v-for="(list, i) in lists" :key="i">
       <drop class="drop list" @drop="handleDrop(list, ...arguments)">
-        <drag v-for="item in list"
+        <drag v-for="(item, index) in list"
               class="drag"
-              :key="item"
+              :key="index"
               :class="{ [item]: true }"
               :transfer-data="{ item: item, list: list, example: 'lists' }">
         </drag>
       </drop>
+    </div>
+    <div v-for="(list, i) in userResults" :key="i">
+      <drop class="drop list" @drop="handleDrop(list, ...arguments)">
+        <drag v-for="(item, index) in list"
+              class="drag"
+              :key="index"
+              :class="{ [item]: true }"
+              :transfer-data="{ item: item, list: list, example: 'lists' }">
+        </drag>
+      </drop>
+
     </div>
   </div>
 
@@ -16,19 +27,26 @@
 
 <script>
 import { Drag, Drop } from 'vue-drag-drop'
+import { mapState } from 'vuex'
+
+import _ from 'lodash'
 
 export default {
   components: { Drag, Drop },
   data () {
     return {
-      lists: [
-        ['A', 'B', 'C'],
-        ['D', 'E', 'F'],
-        ['G', 'H', 'I'],
-        ['J', 'K', 'L'],
-        []
-      ]
+      lists: [],
+      list: [],
+      shuffledArray: []
     }
+  },
+  computed: {
+    ...mapState([
+      'watchPictures',
+      'allPicture',
+      'userResults'
+    ])
+
   },
   methods: {
     handleDrop (toList, data) {
@@ -38,7 +56,21 @@ export default {
         fromList.splice(fromList.indexOf(data.item), 1)
         toList.sort((a, b) => a > b)
       }
+    },
+    getRandomList () {
+      for (let i = 0; i < this.watchPictures.length; i++) {
+        this.list.push(this.watchPictures[i][0])
+      }
+      for (let i = 0; i < 6; i++) {
+        let index = parseInt(Math.random() * 6)
+        this.list.push(this.allPicture[index])
+      }
+      this.shuffledArray = _.shuffle(this.list)
+      this.lists.push(this.shuffledArray)
     }
+  },
+  created () {
+    this.getRandomList()
   }
 
 }

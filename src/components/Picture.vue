@@ -26,7 +26,7 @@ export default {
   methods: {
     randomPicture () {
       for (let i = 0; i < 6; i++) {
-        let index = parseInt(Math.random() * 6)
+        let index = parseInt(Math.random() * 12)
         this.watchPictures.push([this.allPicture[index]])
       }
     }

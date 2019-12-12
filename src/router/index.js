@@ -8,7 +8,7 @@ import ContactUs from '../views/ContactUs'
 import Results from '../views/Results'
 import PageUnderConstruction from '../views/PageUnderConstruction'
 import EndGame from '../views/EndGame'
-import DragAndDrop from '../views/DragAndDrop'
+import DragAndDrop from '../components/DragAndDrop'
 
 Vue.use(VueRouter)
 
