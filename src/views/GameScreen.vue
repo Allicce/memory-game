@@ -74,12 +74,12 @@ export default {
   }
 
   .text {
-    padding: 3% 5%;
+    padding: 1% 5%;
   }
   @media(min-width: 700px) {
     .text {
       text-align: left;
-      font-size: 18px;
+      font-size: 15px;
     }
     .header {
       margin-top: 3%;

@@ -182,8 +182,8 @@ export default {
     box-sizing: border-box;
     display: inline-block;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background: #ccc;
     vertical-align: middle;
     margin-right: 20px;
@@ -201,8 +201,8 @@ export default {
     margin-bottom: 20px;
     width: auto;
     height: auto;
-    min-width: 140px;
-    min-height: 140px;
+    min-width: 100px;
+    min-height: 100px;
     background-color: #041F1E;
   }
 
@@ -278,7 +278,7 @@ export default {
 
     .image {
       display: block;
-      width: 10vw;
+      width: 7vw;
     }
 
     .image  img {
@@ -289,7 +289,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 3% 5%;
+    padding: 1% 5%;
   }
 
   }

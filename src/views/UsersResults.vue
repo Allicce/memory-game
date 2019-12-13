@@ -59,7 +59,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     justify-content: center;
-    padding-top: 20%;
+    padding-top: 10%;
   }
 
   .input_element {
@@ -67,7 +67,7 @@ export default {
   }
 
   h1 {
-    padding: 10% 0 0 0;
+    padding: 20% 0 0 0;
   }
 
   .button {
@@ -79,18 +79,19 @@ export default {
 
     .container_user {
       width: 70vw;
-      padding: 3%;
+      padding: 0;
       grid-template-columns: repeat(3, minmax(80px, 1fr));
       font-size: 40px;
     }
 
     h1{
+      margin: 0;
       padding: 3% 0 0 0;
     }
 
     .button {
       width: 15vw;
-      padding-top: 3%;
+      padding-top: 1%;
 
     }
   }

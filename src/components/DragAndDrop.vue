@@ -144,7 +144,7 @@ export default {
     display: inline-block;
     vertical-align: top;
     padding: 15px;
-    margin: 20px 20px;
+    margin: 10px 20px;
     width: auto;
     height: auto;
   }
