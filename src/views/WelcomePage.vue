@@ -162,6 +162,10 @@ export default {
   }
 
   @media(min-width: 1200px) {
+    .container  {
+      display: block;
+    }
+
     .text {
       padding: 5% 0 0 0;
     }
