@@ -3,7 +3,7 @@
     <div class="picture"><img :src="image_src"></div>
     <div class="text">
       <h2>{{ title }}</h2>
-      <div>{{ text }}</div>
+      <div class="about">{{ text }}</div>
     </div>
   </div>
 </template>
@@ -33,6 +33,7 @@ export default {
 }
 .picture {
   flex: 0 1 50%;
+  align-self: center;
 }
 h2 {
   margin-top: 0px;
@@ -46,16 +47,28 @@ h2 {
     padding: 0 10%;
   }
 
-  .change {
-    background-color: rgb(204, 255, 207);
+  .white {
+    background-color: white;
+  }
+
+  .green {
+    background-color: #F6F6F6;
   }
 
 @media (min-width: 1200px) {
   .container {
     flex-direction: row;
   }
-  .change {
+  .green {
     flex-direction: row-reverse;
+  }
+
+  h2 {
+    padding: 10% 0;
+  }
+
+  .about {
+    padding-bottom: 10%;
   }
 }
 </style>

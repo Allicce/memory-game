@@ -3,7 +3,8 @@
     <heading />
     <h1>O nás</h1>
     <main>
-    <profile title="O hře"
+    <profile title="O hre"
+             class="white"
              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Imperdiet massa tincidunt nunc pulvinar. Tincidunt nunc pulvinar sapien et ligula.
@@ -13,10 +14,10 @@
              sapien faucibus. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Id velit
              ut tortor pretium viverra suspendisse. Ut sem nulla pharetra diam sit. Cursus vitae congue mauris
              rhoncus aenean vel elit. Massa enim nec dui nunc mattis enim ut."
-             image="Charac_F-F2-idle_0.png"
+             image="monster_czechitas.png"
     />
-    <profile title="Bětka"
-             class="change"
+    <profile title="Alžbeta"
+             class="green"
              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Imperdiet massa tincidunt nunc pulvinar. Tincidunt nunc pulvinar sapien et ligula.
@@ -29,6 +30,7 @@
              image="DSC_2372.jpg"
     />
     <profile title="Katka"
+             class="white"
              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Imperdiet massa tincidunt nunc pulvinar. Tincidunt nunc pulvinar sapien et ligula.
@@ -38,6 +40,7 @@
              sapien faucibus. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Id velit
              ut tortor pretium viverra suspendisse. Ut sem nulla pharetra diam sit. Cursus vitae congue mauris
              rhoncus aenean vel elit. Massa enim nec dui nunc mattis enim ut."
+             image="katka.jpg"
     />
     </main>
     <footing />
