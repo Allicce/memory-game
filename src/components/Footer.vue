@@ -1,8 +1,9 @@
 <template>
   <div class="footer">
       <p>©2019<br>
-      Alžběta Štetiarová,
+      Alžbeta Štetiarová,
       Kateřina Šťastná</p>
+
 </div>
 </template>
 
@@ -13,15 +14,14 @@ export default {
 </script>
 
 <style>
-.footer {
-    display: flex;
-    background-color: #041F1E;
-    color: whitesmoke;
-    font-size: 9px;
-    width: 100%;
-    height: 35px;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-}
+  .footer {
+      display: flex;
+      background-color: #041F1E;
+      color: whitesmoke;
+      font-size: 15px;
+      width: 100%;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+  }
 </style>

@@ -36,6 +36,7 @@ h1 {
 .logo {
   width: 20vw;
   padding: auto;
+  margin-top: 0.5%;
 }
 img {
   width: 100%;

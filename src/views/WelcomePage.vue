@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <heading />
-    <main>
     <div class="text">
       <h1>Objav čo tvoja pamäť dokáže</h1>
       <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
@@ -12,17 +11,16 @@
       <div class="monster_mobile">
         <img src="../../public/Charac_F-F2-idle_0.png" alt="monster">
       </div>
-      <div class="monster left">
+      <div class="monster_welcome_page left">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
       <Button class="button_left button" name="hraj" @click.native="goToPath('/gameScreen')"/>
       <Button class="button_right button " name="Trenuj" @click.native="goToPath('/pageUnderConstruction')"/>
-      <div class="monster right">
+      <div class="monster_welcome_page right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
     </div>
-    </main>
-    <footing class="footer" />
+    <Footer/>
   </div>
 
 </template>
@@ -38,8 +36,7 @@ export default {
   components: {
     Button,
     'heading': Header,
-    'footing': Footer
-
+    Footer
   },
   methods: {
     goToPath (path) {
@@ -50,9 +47,6 @@ export default {
 </script>
 
 <style scoped>
-main {
-  margin-bottom: 50px;
-}
 
   .container {
     display: flex;
@@ -62,8 +56,6 @@ main {
     color:  #041F1E;
     text-align: center;
     flex-wrap: wrap;
-    position: relative;
-    min-height: 100vh;
   }
 
   .text {
@@ -76,20 +68,12 @@ main {
     padding-top: 10%;
   }
 
-  nav li {
-    display: inline-block;
-    text-transform: capitalize;
-  }
-
   h1 {
     padding-top: 10%;
     font-size: 2em;
   }
 
-  a {
-    display: inline-block;
-  }
-  .monster {
+  .monster_welcome_page {
     display: none;
   }
 
@@ -103,11 +87,6 @@ main {
     display: block;
     width: 100%;
     height: auto;
-  }
-
-  .footer {
-    position: absolute;
-    bottom: 0;
   }
 
   @media(min-width: 700px) {
@@ -132,7 +111,7 @@ main {
       padding: 7% 0;
     }
 
-    .monster {
+    .monster_welcome_page {
       display: block;
       width: 20vw;
       padding-left: 2%;
@@ -147,12 +126,12 @@ main {
     }
 
     .container_button {
-      width: 90vw;
+      width: 70vw;
       display: grid;
       justify-content: space-between;
-      grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+      grid-template-columns: repeat(8, minmax(20px, 1fr));
       align-items: center;
-      justify-content: space-between;
+      margin: auto;
     }
 
     .button {
@@ -160,20 +139,24 @@ main {
     }
 
     .left {
-      grid-column: 1 / span 2;
+      grid-column: 1 / span 3;
+      grid-row: 1;
     }
 
     .right {
-      grid-column: 7 / span 2;
+      grid-column: 7 / span 3;
+      grid-row: 1;
     }
 
     .button_left {
       grid-column: 3 / span 2;
+      grid-row: 1;
 
     }
 
     .button_right {
       grid-column: 5 / span 2;
+      grid-row: 1;
     }
   }
 
@@ -191,9 +174,8 @@ main {
       font-size: 1.2em;
     }
 
-    .monster {
-      display: none;
-      width: 15vw;
+    .monster_welcome_page {
+       width: 15vw;
     }
 
     .container_button {
