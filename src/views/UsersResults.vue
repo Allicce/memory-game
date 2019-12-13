@@ -14,7 +14,9 @@
           <Input v-for="index in 6" :key="index" :inputIndex="index" class="input_element"
           />
         </div>
+
         <Button class="button" name="Výsledok" @click.native="goToPath('/results')"/>
+
       </div>
 
     </div>
@@ -90,6 +92,10 @@ export default {
     }
 
     .button {
+      margin: 0;
+      margin-left: 70vw;
+      margin-top: 3%;
+      justify-self: flex-end;
       width: 15vw;
       padding-top: 1%;
 

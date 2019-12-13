@@ -168,4 +168,28 @@ export default {
 
   }
 
+  @media(min-width: 1900px) {
+    .container {
+      width: 80vw;
+    }
+
+    .drag {
+      height: 140px;
+      width: 140px
+    }
+
+    .list {
+      min-width: 180px;
+      min-height: 180px;
+    }
+
+    .bigger {
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+
+    .smaller {
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+  }
+
 </style>
