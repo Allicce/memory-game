@@ -3,9 +3,8 @@
     <heading />
     <div class="text">
       <h1>Objav čo tvoja pamäť dokáže</h1>
-      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cupiditate nihil mollitia sequi? Facilis
-        necessitatibus provident a totam dolore neque error nobis architecto accusamus molestiae eius iste unde
-      </p>
+      <p class="description">Zahraj si hru a prever svoju krátkodobu pamäť s ostatnými. Hra zlepší tvoju krátkodobu pamäť,
+      koncentráciu a rýchlosť rozoznávania. Stlač hraj. </p>
     </div>
     <div class="container_button">
       <div class="monster_mobile">
