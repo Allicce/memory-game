@@ -39,13 +39,17 @@
       </div>
     </div>
     <div v-show="actualLevel > 5">
-      <p>Zobrazené čísla</p>
-      <div class="container">
-        <div v-for="(number, index) in watchNumber" :key="index" class="number"> {{ number }}</div>
+      <div class="text_container">
+        <p>Zobrazené čísla</p>
+        <p>Tvoje čísla</p>
       </div>
-      <p>Tvoje čísla</p>
-      <div class="container">
-        <div v-for="(number, index) in usersNumber" :key="index" class="number"> {{ number }}</div>
+      <div class="flex_container">
+        <div class="container">
+          <div v-for="(number, index) in watchNumber" :key="index" class="number"> {{ number }}</div>
+        </div>
+        <div class="container">
+          <div v-for="(number, index) in usersNumber" :key="index" class="number"> {{ number }}</div>
+        </div>
       </div>
     </div>
     <div v-show="isEqual" class="button_container">
@@ -153,7 +157,7 @@ export default {
     min-width: 30vw;
     max-width: 30vw;
     background-color: #041F1E;
-    padding: 0 10px;
+    padding: 0 20px;
     border-radius: 5%;
     color: white;
     text-align: center;
@@ -256,12 +260,12 @@ export default {
       width: 70vw;
       padding: 3%;
       grid-template-columns: repeat(3, minmax(80px, 1fr));
-      font-size: 40px;
+      font-size: 30px;
     }
 
     .number {
-      min-width: 15vw;
-      max-width: 15vw;
+      min-width: 7vw;
+      max-width: 7vw;
       padding: 0 10px;
       font-size: 1.5em;
     }
@@ -274,7 +278,7 @@ export default {
 
     .image {
       display: block;
-      width: 15vw;
+      width: 10vw;
     }
 
     .image  img {
@@ -285,7 +289,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 5%;
+    padding: 3% 5%;
   }
 
   }
