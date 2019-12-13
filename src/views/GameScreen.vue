@@ -47,10 +47,6 @@ export default {
 
 <style scoped>
 
-  /*.header {
-    width: 100%;
-  }*/
-
   .container_screen {
     height: 100vh;
     display: flex;
@@ -83,6 +79,7 @@ export default {
       font-size: 15px;
     }
     .header {
+      width: 90vw;
       margin-top: 3%;
     }
     .container_screen {
