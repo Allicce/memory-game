@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="monster">
+    <div class="monster_number">
       <img src="../../public/Charac_F-F2-idle_0.png">
     </div>
     <h1 v-for="(number, index) in numbers" :key="index">
@@ -75,7 +75,7 @@ export default {
     margin: 3% 3% 0 0;
   }
 
-  .monster {
+  .monster_number {
     justify-self: center;
     position: relative;
     bottom: -30px;
@@ -83,7 +83,7 @@ export default {
     width: 20vw;
   }
 
-  .monster img {
+  .monster_number img {
     width: 100%;
   }
 
@@ -101,9 +101,9 @@ export default {
       font-size: 1.5em;
     }
 
-    .monster {
+    .monster_number {
       grid-column: 3;
-      width: 10vw;
+      width: 5vw;
     }
 
   }

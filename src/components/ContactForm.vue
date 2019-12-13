@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .monster {
 width: 75px;
 position: absolute;

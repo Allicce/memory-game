@@ -47,9 +47,9 @@ export default {
 
 <style scoped>
 
-  .header {
+  /*.header {
     width: 100%;
-  }
+  }*/
 
   .container_screen {
     display: flex;
@@ -58,14 +58,14 @@ export default {
 
   .number {
     align-self: center;
-    font-size: 40px;
+    font-size: 30px;
     justify-content: center;
     margin-bottom: 20%;
     padding: 0;
   }
 
   .header{
-    margin-top: 10%;
+    margin-top: 2%;
     width: 100vw;
     margin-left: 5%;
     display: flex;
@@ -74,12 +74,12 @@ export default {
   }
 
   .text {
-    padding: 5%
+    padding: 3% 5%;
   }
   @media(min-width: 700px) {
     .text {
       text-align: left;
-      font-size: 20px;
+      font-size: 18px;
     }
     .header {
       margin-top: 3%;
