@@ -52,7 +52,7 @@ h2 {
   }
 
   .green {
-    background-color: #F6F6F6;
+    background-color: white;
   }
 
 @media (min-width: 1200px) {

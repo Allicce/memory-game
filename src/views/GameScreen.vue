@@ -87,16 +87,15 @@ export default {
     .container_screen {
       flex-direction: column;
     }
+  }
 
-    @media(min-width: 1200px) {
-      .text {
-        padding-bottom: 0;
-      }
-
-      .text p {
-        margin-bottom: 0;
-      }
+  @media(min-width: 1200px) {
+    .text {
+      padding-bottom: 0;
     }
 
+    .text p {
+      margin-bottom: 0;
+    }
   }
 </style>

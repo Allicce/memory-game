@@ -49,6 +49,7 @@ export default {
 <style scoped>
 
   .container {
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -180,6 +181,16 @@ export default {
 
     .container_button {
       padding: 5% 0 ;
+    }
+  }
+
+  @media(min-width: 1900px) {
+    h1 {
+      font-size: 6em;
+    }
+
+    .text p {
+      font-size: 2em;
     }
   }
 

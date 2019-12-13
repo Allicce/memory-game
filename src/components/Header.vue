@@ -41,4 +41,10 @@ h1 {
 img {
   width: 100%;
 }
+
+  @media(min-width: 1900px) {
+    .logo {
+      width: 15vw;
+    }
+  }
 </style>
