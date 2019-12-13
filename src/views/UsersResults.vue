@@ -9,7 +9,7 @@
         <Button class="button" name="Výsledok" @click.native="goToPath('/results')"/>
       </div>
       <div v-show="actualLevel > 5">
-        <p>Do políčka zapíš čísla, ktoré si videl na predchádzajucej obrazovke</p>
+        <p class="pad">Do políčka zapíš čísla, ktoré si videl na predchádzajucej obrazovke</p>
         <div class="container_user">
           <Input v-for="index in 6" :key="index" :inputIndex="index" class="input_element"
           />
@@ -94,11 +94,21 @@ export default {
     .button {
       margin: 0;
       margin-left: 70vw;
-      margin-top: 3%;
+      margin-top: 1%;
       justify-self: flex-end;
       width: 15vw;
       padding-top: 1%;
 
+    }
+  }
+
+  @media(min-width: 1900px) {
+    p {
+      padding-bottom: 5%;
+    }
+
+    .pad {
+      padding: 2% 0 5% 0;
     }
   }
 

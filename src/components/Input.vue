@@ -1,9 +1,10 @@
 <template>
     <div class="container">
       <input v-model="inputNumber"
-      @change="addNumber"
-      type="number" autofocus/>
+             @change="addNumber"
+             type="number" autofocus/>
     </div>
+
 </template>
 
 <script>
@@ -79,7 +80,6 @@ export default {
       max-width: 15vw;
       font-size: 1.5em;
     }
-
   }
 
 </style>
