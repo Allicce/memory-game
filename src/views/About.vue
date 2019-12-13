@@ -64,6 +64,13 @@ export default {
 </script>
 <style>
 main {
-  margin-bottom: 20px;
+  margin: 3% 0;
 }
+
+  @media(min-width: 1900px) {
+    h1 {
+      font-size: 3em;
+      padding-top: 2%;
+    }
+  }
 </style>

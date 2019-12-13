@@ -71,4 +71,13 @@ h2 {
     padding-bottom: 10%;
   }
 }
+  @media(min-width: 1900px) {
+    h2 {
+      font-size: 2em;
+    }
+
+    .about {
+      font-size: 1.3em;
+    }
+  }
 </style>
