@@ -18,15 +18,19 @@
       </div>
       <Number class="number"></Number>
     </div>
+    <div class="container_button">
+      <Button name="už si to pamätám" @click.native="goToPath('/gameScreen/usersResults')"></Button>
+    </div>
   </div>
 
 </template>
 
 <script>
 import Timer from '../components/Timer.vue'
-import Number from '../components/Number'
-import ReturnToHomePage from '../components/ReturnToHomePage'
-import Picture from '../components/Picture'
+import Number from '../components/Number.vue'
+import ReturnToHomePage from '../components/ReturnToHomePage.vue'
+import Picture from '../components/Picture.vue'
+import Button from '../components/Button.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -35,12 +39,18 @@ export default {
     'Timer': Timer,
     Number,
     ReturnToHomePage,
-    Picture
+    Picture,
+    Button
   },
   computed: {
     ...mapState([
       'actualLevel'
     ])
+  },
+  methods: {
+    goToPath (path) {
+      this.$router.push(path)
+    }
   }
 }
 </script>
@@ -80,7 +90,7 @@ export default {
     }
     .header {
       width: 90vw;
-      margin-top: 3%;
+      margin-top: 0;
     }
     .container_screen {
       flex-direction: column;
@@ -94,6 +104,12 @@ export default {
 
     .text p {
       margin-bottom: 0;
+    }
+
+    .container_button {
+      padding-right: 10%;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
