@@ -52,6 +52,7 @@ export default {
   }*/
 
   .container_screen {
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
   }
@@ -96,6 +97,17 @@ export default {
 
     .text p {
       margin-bottom: 0;
+    }
+  }
+
+  @media(min-width: 1900px) {
+    .text {
+      font-size: 1.2em;
+    }
+
+    .header {
+      padding-top: 0;
+      margin-top: 0;
     }
   }
 </style>

@@ -113,4 +113,21 @@ export default {
     }
   }
 
+  @media(min-width: 1900px) {
+    .container {
+      width: 80vw;
+      grid-template-columns: repeat(3, minmax(140px, 220px))
+    }
+
+    .item {
+      height: 140px;
+      width: 140px;
+    }
+
+    .container_item {
+      min-width: 180px;
+      min-height: 180px;
+    }
+  }
+
 </style>
