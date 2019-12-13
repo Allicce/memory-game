@@ -39,7 +39,7 @@
       </div>
     </div>
     <div v-show="actualLevel > 5">
-      <div class="text_container">
+      <div class="text_container pad">
         <p>Zobrazené čísla</p>
         <p>Tvoje čísla</p>
       </div>
@@ -245,7 +245,7 @@ export default {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
   }
 
   .text_container {
@@ -292,6 +292,31 @@ export default {
     padding: 1% 5%;
   }
 
+  }
+
+  @media(min-width: 1900px) {
+
+    .button_container {
+      margin-top: 5%;
+    }
+    .container_item {
+      min-width: 150px;
+      min-height: 150px;
+    }
+
+    .item {
+      height: 110px;
+      width: 110px;
+    }
+
+    .number {
+      font-size: 2.5em;
+      padding: 0 20px;
+    }
+
+    .pad {
+      padding-top: 5%;
+    }
   }
 
 </style>
