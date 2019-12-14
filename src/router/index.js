@@ -9,6 +9,7 @@ import Results from '../views/Results'
 import PageUnderConstruction from '../views/PageUnderConstruction'
 import EndGame from '../views/EndGame'
 import ResultForm from '../views/ResultForm'
+import InputForm from '../views/InputForm'
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/gameScreen/usersResults/resultForm',
     name: 'resultForm',
     component: ResultForm
+  },
+  {
+    path: '/inputForm',
+    name: 'inputForm',
+    component: InputForm
   }
 ]
 
