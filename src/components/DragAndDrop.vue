@@ -191,6 +191,8 @@ export default {
 
     .smaller {
       grid-template-columns: repeat(3, minmax(180px, 1fr));
+      min-width: 340px;
+      min-height: 440px;
     }
   }
 

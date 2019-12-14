@@ -16,6 +16,10 @@ export default {
     background-size: 100%;
     background-position: left top;
   }
+
+  body {
+    margin: 0;
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
