@@ -47,7 +47,10 @@ export default {
     ...mapState([
       'watchPictures',
       'allPicture',
-      'userResults'
+      'userResults',
+      'greenMonsterPicture',
+      'countItems',
+      'actualLevel'
     ])
 
   },
@@ -64,10 +67,13 @@ export default {
       for (let i = 0; i < this.watchPictures.length; i++) {
         this.list.push(this.watchPictures[i][0])
       }
-      for (let i = 0; i < 6; i++) {
-        let index = parseInt(Math.random() * 6)
-        this.list.push(this.allPicture[index])
+      if (this.actualLevel === 1) {
+        for (let i = 0; i < this.countItems; i++) {
+          let index = parseInt(Math.random() * this.greenMonsterPicture.length)
+          this.list.push(this.greenMonsterPicture[index])
+        }
       }
+
       this.shuffledArray = _.shuffle(this.list)
       this.lists.push(this.shuffledArray)
     }
