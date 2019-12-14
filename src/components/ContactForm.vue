@@ -5,7 +5,7 @@
         <h3 class="contact-form_title">Kontaktní formulář</h3>
         <div class="separator"></div>
 
-        <div v-if="isSending" class="loading">Odesílám...</div>
+        <div v-if="isSending" class="loading">Odesláno</div>
 
         <form class="form" @submit="onSubmit">
           <input
@@ -50,34 +50,11 @@ export default {
   },
 
   methods: {
-    clearForm () {
+    onSubmit (evt) {
       for (let field in this.contact) {
         this.contact[field] = ''
+        this.isSending = true
       }
-    },
-    onSubmit (evt) {
-      evt.preventDefault()
-
-      this.isSending = true
-
-      setTimeout(() => {
-        let form = new FormData()
-        for (let field in this.contact) {
-          form.append(field, this.contact[field])
-        }
-
-        // Send form to server
-        this.$http
-          .post('/app.php', form)
-          .then(response => {
-            console.log(response)
-            this.clearForm()
-            this.isSending = false
-          })
-          .catch(e => {
-            console.log(e)
-          })
-      }, 1000)
     }
   }
 }

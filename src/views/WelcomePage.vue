@@ -19,7 +19,7 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
     </div>
-    <Footer/>
+    <Footer class="foot"/>
   </div>
 
 </template>
@@ -56,6 +56,13 @@ export default {
     color:  #041F1E;
     text-align: center;
     flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .foot {
+    position: absolute;
+    bottom: 0;
   }
 
   .text {

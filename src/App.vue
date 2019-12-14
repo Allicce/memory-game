@@ -11,6 +11,9 @@ export default {
 </script>
 
 <style lang="scss">
+  body {
+    margin: 0;
+  }
   html {
     background-image: url("../public/backgroundImage.png");
     background-size: 100%;
