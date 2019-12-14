@@ -1,6 +1,9 @@
 <template>
   <div class="button_cont">
-    <p class="green_button">{{name}}</p>
+    <p class="button_cont button_default"
+       v-bind:class="{ 'green_button': isGreen,
+                      'light_green_button': isLightGreen,
+                      'disabled': isDisabled}">{{name}}</p>
   </div>
 
 </template>
@@ -9,30 +12,58 @@
 
 export default {
   name: 'button',
-  props: [
-    'name'
-  ]
+  props: {
+    name: {
+      type: String,
+      default: 'tlačidlo'
+    },
+    isGreen: {
+      type: Boolean,
+      default: true
+    },
+    isLightGreen: {
+      type: Boolean,
+      default: false
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
 <style scoped>
-  .green_button {
+
+  .button_default {
     margin: auto;
     width: 80vw;
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: green;
     padding: 20px 0;
     border-radius: 5px;
+  }
+
+  .green_button {
+    background: green;
+  }
+
+  .light_green_button {
+    background: #699841;
+  }
+
+  p {
+    cursor: pointer;
+  }
+
+  .disabled {
+    background: #434343;
   }
 
   @media(min-width: 700px) {
     .button_cont {
       padding: 0 5% 0 5%;
-    }
-
-    .green_button {
       padding: 20px;
       width: 100%;
       display: inline-block;
@@ -40,14 +71,13 @@ export default {
       transition: all 0.4s ease 0s;
     }
 
-    .green_button:hover {
-      background: #434343;
+    .button_default:hover {
+      background: #93c330;
       letter-spacing: 1px;
       -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
       transition: all 0.4s ease 0s;
     }
-
   }
 </style>
