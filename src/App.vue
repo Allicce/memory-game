@@ -4,8 +4,14 @@
    </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
   components: {
+  },
+  created () {
+    axios.get('http://localhost:3000/Results').then(response => {
+      console.log(response)
+    })
   }
 }
 </script>

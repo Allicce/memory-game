@@ -245,7 +245,7 @@ export default {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
   }
 
   .text_container {
