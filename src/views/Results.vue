@@ -137,7 +137,7 @@ export default {
     }
   },
   beforeDestroy () {
-    this.resetUsersInput()
+  //  this.resetUsersInput()
   }
 }
 </script>

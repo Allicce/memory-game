@@ -21,12 +21,29 @@ export default {
   },
 
   mutateCountItem: (state) => {
-    if (state.actualLevel === 1) {
+    /* setTimeout(() => {
+      if (state.actualLevel === 1 || state.actualLevel === 2) {
+        state.countItems = 3
+      }
+      for (let i = 0; i < state.countItems; i++) {
+        console.log('create users array')
+        state.userResults.push([])
+      }
+    }, 1000) */
+
+    if (state.actualLevel === 1 || state.actualLevel === 2) {
       state.countItems = 3
     }
     for (let i = 0; i < state.countItems; i++) {
       console.log('create users array')
       state.userResults.push([])
     }
+  },
+
+  mutationMonsterArray: (state) => {
+    if (state.actualLevel === 2) {
+      state.monsterArray = state.greenMonsterPicture.concat(state.blackMonsterPicture)
+    }
   }
+
 }

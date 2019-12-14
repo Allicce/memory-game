@@ -23,12 +23,16 @@ export default {
       'watchPictures',
       'countItems',
       'actualLevel',
-      'greenMonsterPicture'
+      'greenMonsterPicture',
+      'blackMonsterPicture',
+      'monsterArray'
     ])
   },
   methods: {
     ...mapActions([
-      'addCountItem'
+      'addCountItem',
+      'addMonsterArray',
+      'getDefaultState'
     ]),
     createItems () {
       this.addCountItem()
@@ -43,13 +47,21 @@ export default {
         if (this.actualLevel === 1) {
           index = parseInt(Math.random() * this.greenMonsterPicture.length)
           this.watchPictures.push([this.greenMonsterPicture[index]])
+        } else if (this.actualLevel === 2) {
+          this.changeMonsterArray()
+          index = parseInt(Math.random() * this.monsterArray.length)
+          this.watchPictures.push([this.monsterArray[index]])
         }
       }
       console.log(this.watchPictures)
+    },
+    changeMonsterArray () {
+      this.addMonsterArray()
     }
 
   },
   created () {
+    this.getDefaultState()
     this.createItems()
     this.randomPicture()
   }

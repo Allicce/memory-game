@@ -40,7 +40,7 @@ import Number from '../components/Number.vue'
 import ReturnToHomePage from '../components/ReturnToHomePage.vue'
 import Picture from '../components/Picture.vue'
 import Button from '../components/Button.vue'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'GameScreen',
@@ -57,9 +57,15 @@ export default {
     ])
   },
   methods: {
+    ...mapActions([
+      'resetUsersInput'
+    ]),
     goToPath (path) {
       this.$router.push(path)
     }
+  },
+  created () {
+    // this.resetUsersInput()
   }
 }
 </script>

@@ -50,9 +50,9 @@ export default {
       'userResults',
       'greenMonsterPicture',
       'countItems',
-      'actualLevel'
+      'actualLevel',
+      'monsterArray'
     ])
-
   },
   methods: {
     handleDrop (toList, data) {
@@ -71,6 +71,11 @@ export default {
         for (let i = 0; i < this.countItems; i++) {
           let index = parseInt(Math.random() * this.greenMonsterPicture.length)
           this.list.push(this.greenMonsterPicture[index])
+        }
+      } else if (this.actualLevel === 2) {
+        for (let i = 0; i < this.countItems; i++) {
+          let index = parseInt(Math.random() * this.monsterArray.length)
+          this.list.push(this.monsterArray[index])
         }
       }
 
