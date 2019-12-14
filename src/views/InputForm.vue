@@ -6,6 +6,7 @@
       Abychom mohli vyhodnotit tvoje výsledky, potřebujeme se o tobě něco
       dozvědět
     </p>
+    <img src="../../public/Charac_F-F2-idle_0.png" alt="anothermonster" class="anothermonster">
     <form class="form" @submit="submitForm">
       <p>Cítím se být:</p>
       <input type="radio" id="1" value="man" name="gender" v-model="Results.gender" />
@@ -21,9 +22,10 @@
         <option>41–65 let</option>
         <option>Více než 65 let</option>
       </select><br>
-
-      <Button class="sendButton" name="Odeslat" /> <router-link to="/gameScreen" class="skip">Přeskočit</router-link><br>
-      <router-link to="/">Zpátky domů</router-link>
+        <div class="buttons">
+      <Button class="sendButton" name="Potvrdit a hrát" /> <br>
+      <router-link to="/">Zpátky domů</router-link> <router-link to="/gameScreen" class="skip">Přeskočit</router-link>
+      </div>
     </form>
     <foot class="foot" />
   </div>
@@ -49,17 +51,27 @@ export default {
     }
   },
   methods: {
-      submitForm () {
-          
-      }
+    const axios = require('axios')
+    submitForm (event) {
+
+    }
   }
 }
 </script>
 
 <style scoped>
+.buttons {
+    margin: auto;
+}
 .inputForm {
     position: relative;
     min-height: 100vh;
+}
+.anothermonster {
+    position: absolute;
+    width: 150px;
+    right: 15em;
+    top: 8em;
 }
 
 .foot {
@@ -79,7 +91,9 @@ p {
     width: 12em;
 }
 a {
-    color: green;
+   color: green;
+}
+.skip {
     margin-left: 3em;
 }
 </style>
