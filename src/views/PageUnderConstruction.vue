@@ -50,7 +50,7 @@ export default {
     font-size: 1.5em;
   }
   .button {
-    margin-top: 20%;
+     margin: 5% 10%;
   }
 
   @media(min-width: 700px) {
@@ -60,10 +60,6 @@ export default {
 
     h2 {
       font-size: 3.5em;
-    }
-
-    .button {
-      align-self: flex-end;
     }
 
     .image{
