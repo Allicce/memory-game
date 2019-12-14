@@ -50,9 +50,9 @@ export default {
       'userResults',
       'greenMonsterPicture',
       'countItems',
-      'actualLevel'
+      'actualLevel',
+      'monsterArray'
     ])
-
   },
   methods: {
     handleDrop (toList, data) {
@@ -63,17 +63,23 @@ export default {
         toList.sort((a, b) => a > b)
       }
     },
+    createList (list) {
+      for (let i = 0; i < this.countItems; i++) {
+        let index = parseInt(Math.random() * list.length)
+        this.list.push(list[index])
+      }
+    },
     getRandomList () {
       for (let i = 0; i < this.watchPictures.length; i++) {
         this.list.push(this.watchPictures[i][0])
       }
       if (this.actualLevel === 1) {
-        for (let i = 0; i < this.countItems; i++) {
-          let index = parseInt(Math.random() * this.greenMonsterPicture.length)
-          this.list.push(this.greenMonsterPicture[index])
-        }
+        this.createList(this.greenMonsterPicture)
+      } else if (this.actualLevel >= 2 && this.actualLevel <= 4) {
+        this.createList(this.monsterArray)
+      } else if (this.actualLevel === 5) {
+        this.createList(this.allPicture)
       }
-
       this.shuffledArray = _.shuffle(this.list)
       this.lists.push(this.shuffledArray)
     }

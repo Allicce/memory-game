@@ -21,12 +21,21 @@ export default {
   },
 
   mutateCountItem: (state) => {
-    if (state.actualLevel === 1) {
+    if (state.actualLevel === 1 || state.actualLevel === 2) {
       state.countItems = 3
+    } else if (state.actualLevel >= 3 && state.actualLevel <= 5) {
+      state.countItems = 6
     }
     for (let i = 0; i < state.countItems; i++) {
       console.log('create users array')
       state.userResults.push([])
     }
+  },
+
+  mutationMonsterArray: (state) => {
+    if (state.actualLevel === 2 || state.actualLevel === 3) {
+      state.monsterArray = state.greenMonsterPicture.concat(state.blackMonsterPicture)
+    }
   }
+
 }

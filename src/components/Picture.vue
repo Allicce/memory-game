@@ -23,33 +23,49 @@ export default {
       'watchPictures',
       'countItems',
       'actualLevel',
-      'greenMonsterPicture'
+      'greenMonsterPicture',
+      'blackMonsterPicture',
+      'monsterArray'
     ])
   },
   methods: {
     ...mapActions([
-      'addCountItem'
+      'addCountItem',
+      'addMonsterArray',
+      'getDefaultState'
     ]),
     createItems () {
       this.addCountItem()
+    },
+    createRandomPicture (list) {
+      let index
+      for (let i = 0; i < this.countItems; i++) {
+        index = parseInt(Math.random() * list.length)
+        this.watchPictures.push([list[index]])
+      }
     },
     randomPicture () {
       while (this.watchPictures.length > 0) {
         this.watchPictures.pop()
       }
       console.log('create random picture ' + this.countItems)
-      for (let i = 0; i < this.countItems; i++) {
-        let index
-        if (this.actualLevel === 1) {
-          index = parseInt(Math.random() * this.greenMonsterPicture.length)
-          this.watchPictures.push([this.greenMonsterPicture[index]])
-        }
+      if (this.actualLevel === 1) {
+        this.createRandomPicture(this.greenMonsterPicture)
+      } else if (this.actualLevel === 2 || this.actualLevel === 3) {
+        this.changeMonsterArray()
+        this.createRandomPicture(this.monsterArray)
+      } else if (this.actualLevel === 5 || this.actualLevel === 4) {
+        this.createRandomPicture(this.allPicture)
       }
       console.log(this.watchPictures)
+    },
+    changeMonsterArray () {
+      this.addMonsterArray()
     }
 
   },
   created () {
+    this.getDefaultState()
     this.createItems()
     this.randomPicture()
   }

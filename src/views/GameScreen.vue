@@ -3,7 +3,7 @@
     <div class="header">
       <return-to-home-page class="home"></return-to-home-page>
     </div>
-    <div v-show="actualLevel >= 1 && actualLevel <= 5" class="flex_container">
+    <div v-if="actualLevel >= 1 && actualLevel <= 5" class="flex_container">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky obrázky v presnom poradí</p>
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div v-show="actualLevel >= 6" class="flex_container">
+    <div v-else class="flex_container">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky čísla v presnom poradí</p>
@@ -40,7 +40,7 @@ import Number from '../components/Number.vue'
 import ReturnToHomePage from '../components/ReturnToHomePage.vue'
 import Picture from '../components/Picture.vue'
 import Button from '../components/Button.vue'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'GameScreen',
@@ -57,9 +57,15 @@ export default {
     ])
   },
   methods: {
+    ...mapActions([
+      'resetUsersInput'
+    ]),
     goToPath (path) {
       this.$router.push(path)
     }
+  },
+  created () {
+    // this.resetUsersInput()
   }
 }
 </script>

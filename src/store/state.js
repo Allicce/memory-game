@@ -2,17 +2,13 @@ export default {
   watchNumber: [],
   usersNumber: [],
   totalLevel: 20,
-  actualLevel: 1,
+  actualLevel: 5,
   allPicture: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'],
   greenMonsterPicture: ['A', 'D', 'H', 'K'],
+  lilaMonsterPicture: ['B', 'E', 'G', 'J'],
+  blackMonsterPicture: ['C', 'F', 'I', 'L'],
+  monsterArray: [],
   watchPictures: [],
-  userResults: [
-    /* [],
-    [],
-    [],
-    [],
-    [],
-    [] */
-  ],
+  userResults: [],
   countItems: 0
 }

@@ -21,5 +21,9 @@ export default {
 
   addCountItem: ({ commit }) => {
     commit('mutateCountItem')
+  },
+
+  addMonsterArray: ({ commit }) => {
+    commit('mutationMonsterArray')
   }
 }
