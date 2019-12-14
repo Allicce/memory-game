@@ -19,8 +19,7 @@
              a Sú svetlá ktoré nevidíme. A neodmyslitelnou súčasťou mna je cestovanie. Milujem mestá a v poslednej dobe sa
              mi hrozne cnie po New Yorku. Europske mesto ktoré odporúčam a s priateľom ho navštevujeme každý rok je Budapešť.
              V Budapešti odporúčam navštíviť nejaký koncert a je jedno či je to maličký koncert alebo najjväčší, ktorý usporiadali,
-             vždy dýcha nezabudnuteľnou atmosférou.
-              "
+             vždy dýcha nezabudnuteľnou atmosférou."
              image="DSC_2372.jpg"
     />
     <profile title="Katka"

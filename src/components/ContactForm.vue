@@ -1,7 +1,7 @@
 <template>
 <div>
   <div id="contact-form" class="contact-form">
-      <img src="/Charac_F-F2-idle_0.png" alt="greenmonster" class="monster">
+      <img src="../../public/Charac_F-F2-idle_0.png" alt="greenmonster" class="monster">
         <h3 class="contact-form_title">Kontaktní formulář</h3>
         <div class="separator"></div>
 
