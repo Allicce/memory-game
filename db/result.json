@@ -2,20 +2,20 @@
   "Results": [
     {
       "id": 1,
-      "age": "25",
+      "age": "1",
       "gender": "man",
       "level": 1
     },
     {
       "id": 2,
-      "age": "20",
+      "age": "2",
       "gender": "woman",
       "level": 5
     },
     {
       "id": 3,
-      "age": "",
-      "gender": "",
+      "age": "3",
+      "gender": "man",
       "level": 3
     },
     {
@@ -26,13 +26,13 @@
     },
     {
       "id": 5,
-      "age": "30",
+      "age": "2",
       "gender": "woman",
       "level": 8
     },
     {
       "id": 6,
-      "age": "22",
+      "age": "5",
       "gender": "man",
       "level": 10
     },
@@ -44,29 +44,82 @@
     },
     {
       "id": 8,
-      "age": "22",
+      "age": "2",
       "gender": "woman",
       "level": 2
     },
-    {
-      "gender": "woman",
-      "age": "18–25 let",
-      "id": 9
+    { 
+      "id": 9,
+      "gender": "man",
+      "age": "2",
+      "level": 7
+      
     },
     {
       "gender": "woman",
-      "age": "18–25 let",
-      "id": 10
+      "age": "1",
+      "id": 10,
+      "level": 6
     },
     {
       "gender": "woman",
-      "age": "18–25 let",
-      "id": 11
+      "age": "3",
+      "id": 11,
+      "level": 4
     },
     {
-      "gender": "woman",
+      "gender": "man",
       "age": "4",
-      "id": 12
-    }
+      "id": 12,
+      "level": 3
+    },
+    {
+        "gender": "woman",
+        "age": "4",
+        "id": 13,
+        "level": 3
+      },
+      {
+        "gender": "man",
+        "age": "5",
+        "id": 14,
+        "level": 2
+      },
+      {
+        "gender": "woman",
+        "age": "2",
+        "id": 15,
+        "level": 6
+      },
+      {
+        "gender": "man",
+        "age": "3",
+        "id": 16,
+        "level": 10
+      },
+      {
+        "gender": "man",
+        "age": "1",
+        "id": 17,
+        "level": 4
+      },
+      {
+        "gender": "woman",
+        "age": "2",
+        "id": 18,
+        "level": 7
+      },
+      {
+        "gender": "woman",
+        "age": "4",
+        "id": 19,
+        "level": 4
+      },
+      {
+        "gender": "man",
+        "age": "5",
+        "id": 20,
+        "level": 1
+      }
   ]
 }
