@@ -16,14 +16,14 @@
       <p>Kolik ti je let?</p>
       <select v-model="Results.age">
         <option disabled value="">Vyber svou věkovou kategorii</option>
-        <option>Méně než 18 let</option>
-        <option>18–25 let</option>
-        <option>26–40 let</option>
-        <option>41–65 let</option>
-        <option>Více než 65 let</option>
+        <option value="1">Méně než 18 let</option>
+        <option value="2">18–25 let</option>
+        <option value="3">26–40 let</option>
+        <option value="4">41–65 let</option>
+        <option value="5">Více než 65 let</option>
       </select><br>
         <div class="buttons">
-      <Button class="sendButton" name="Potvrdit a hrát" /> <br>
+      <Button v-on:click.native="submitForm('/gameScreen')" class="sendButton" name="Potvrdit a hrát" /> <br>
       <router-link to="/">Zpátky domů</router-link> <router-link to="/gameScreen" class="skip">Přeskočit</router-link>
       </div>
     </form>
@@ -35,7 +35,7 @@
 import Button from '../components/Button'
 import heading from '../components/Header'
 import foot from '../components/Footer'
-
+import axios from 'axios'
 export default {
   components: {
     Button,
@@ -51,9 +51,18 @@ export default {
     }
   },
   methods: {
-    const axios = require('axios')
-    submitForm (event) {
-
+    submitForm (path) {
+      axios.post('http://localhost:3000/Results', {
+        gender: this.Results.gender,
+        age: this.Results.age
+      })
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error)
+        }
+        )
     }
   }
 }
