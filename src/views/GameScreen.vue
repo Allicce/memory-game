@@ -2,24 +2,33 @@
   <div class="container_screen">
     <div class="header">
       <return-to-home-page class="home"></return-to-home-page>
-      <Timer class="timer"></Timer>
     </div>
-    <div v-show="actualLevel >= 1 && actualLevel <= 5">
+    <div v-show="actualLevel >= 1 && actualLevel <= 5" class="flex_container">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky obrázky v presnom poradí</p>
       </div>
-      <Picture/>
+      <div>
+        <Timer class="timer"></Timer>
+        <Picture/>
+        <div class="container_button">
+          <Button name="už si to pamätám" @click.native="goToPath('/gameScreen/usersResults')"></Button>
+        </div>
+      </div>
     </div>
-    <div v-show="actualLevel >= 6">
+    <div v-show="actualLevel >= 6" class="flex_container">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky čísla v presnom poradí</p>
       </div>
-      <Number class="number"></Number>
-    </div>
-    <div class="container_button">
-      <Button name="už si to pamätám" @click.native="goToPath('/gameScreen/usersResults')"></Button>
+      <div>
+        <Timer class="timer"></Timer>
+        <Number class="number"></Number>
+        <div class="container_button">
+          <Button name="už si to pamätám" @click.native="goToPath('/gameScreen/usersResults')"></Button>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -58,6 +67,7 @@ export default {
 <style scoped>
 
   .container_screen {
+    background-color: rgba(255,255,255,0.3);
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -72,9 +82,9 @@ export default {
   }
 
   .header{
-    margin-top: 2%;
+    margin-top: 3%;
     width: 100vw;
-    margin-left: 5%;
+    margin-left: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +93,15 @@ export default {
   .text {
     padding: 1% 5%;
   }
+
+  .flex_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .timer {
+    padding-left: 70%;
+  }
   @media(min-width: 700px) {
     .text {
       text-align: left;
@@ -90,7 +109,6 @@ export default {
     }
     .header {
       width: 90vw;
-      margin-top: 0;
     }
     .container_screen {
       flex-direction: column;
@@ -99,6 +117,7 @@ export default {
 
   @media(min-width: 1200px) {
     .text {
+      padding-top: 10%;
       padding-bottom: 0;
     }
 

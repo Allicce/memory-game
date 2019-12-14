@@ -9,14 +9,7 @@ export default {
 
   resetToDefault: (state, payload) => {
     state.usersNumber = payload
-    state.userResults = [
-      [],
-      [],
-      [],
-      [],
-      [],
-      []
-    ]
+    state.userResults = []
   },
 
   incrementLevel: (state) => {
@@ -25,5 +18,15 @@ export default {
 
   getFirstLevel: (state) => {
     state.actualLevel = 1
+  },
+
+  mutateCountItem: (state) => {
+    if (state.actualLevel === 1) {
+      state.countItems = 3
+    }
+    for (let i = 0; i < state.countItems; i++) {
+      console.log('create users array')
+      state.userResults.push([])
+    }
   }
 }

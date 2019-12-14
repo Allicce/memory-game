@@ -1,16 +1,18 @@
 export default {
   watchNumber: [],
   usersNumber: [],
-  totalLevel: 15,
+  totalLevel: 20,
   actualLevel: 1,
   allPicture: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'],
+  greenMonsterPicture: ['A', 'D', 'H', 'K'],
   watchPictures: [],
   userResults: [
+    /* [],
     [],
     [],
     [],
     [],
-    [],
-    []
-  ]
+    [] */
+  ],
+  countItems: 0
 }

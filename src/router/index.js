@@ -8,6 +8,7 @@ import ContactUs from '../views/ContactUs'
 import Results from '../views/Results'
 import PageUnderConstruction from '../views/PageUnderConstruction'
 import EndGame from '../views/EndGame'
+import ResultForm from '../views/ResultForm'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/endGame',
     name: 'endGame',
     component: EndGame
+  },
+  {
+    path: '/gameScreen/usersResults/resultForm',
+    name: 'resultForm',
+    component: ResultForm
   }
 ]
 
