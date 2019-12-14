@@ -11,7 +11,7 @@
       <div v-show="actualLevel > 5">
         <p class="pad">Do políčka zapíš čísla, ktoré si videl na predchádzajucej obrazovke</p>
         <div class="container_user">
-          <Input v-for="index in 6" :key="index" :inputIndex="index" class="input_element"
+          <Input v-for="index in countItems" :key="index" :inputIndex="index" class="input_element"
           />
         </div>
 
@@ -38,7 +38,8 @@ export default {
   },
   computed: {
     ...mapState([
-      'actualLevel'
+      'actualLevel',
+      'countItems'
     ])
   },
   data () {
