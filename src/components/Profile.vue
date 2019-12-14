@@ -32,10 +32,13 @@ export default {
 }
 h2 {
   margin-top: 0px;
+  text-align: center;
 }
 .text {
   flex: 1 1 50%;
-  padding: 0 10%;
+  padding: 0 6%;
+  text-align: left;
+  margin-bottom: 2em;
 }
 
 img {
@@ -60,7 +63,7 @@ img {
   }
 
   h2 {
-    padding: 10% 0;
+    padding: 5% 0;
   }
 
   .about {

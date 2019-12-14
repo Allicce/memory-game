@@ -24,7 +24,7 @@
              a byť jeho neodmyslitelnou sučasťou. Ako prvý impuls pre prihlásenie sa do webovej akadémie bolo zistiť niečo viac
              o webe, nepozerať sa na neho len z testerského pohladu ale prehlbiť si znalosti. A nikdy by ma nenapadlo že
              ma vývoj webu až tak nadchne. A preto sa nachádzate na prvom väčšom projekte, ktorý som vytvorila spolu s Katkou
-             a určite nie je posledný. Dalšie moje záľuby sú knihy. Jedny z mojích obľúbených sú 1984, všetky knihy od Ziburu
+             a určite nie je posledný.<br> Dalšie moje záľuby sú knihy. Jedny z mojích obľúbených sú 1984, všetky knihy od Zibury
              a Sú svetlá ktoré nevidíme. A neodmyslitelnou súčasťou mna je cestovanie. Milujem mestá a v poslednej dobe sa
              mi hrozne cnie po New Yorku. Europske mesto ktoré odporúčam a s priateľom ho navštevujeme každý rok je Budapešť.
              V Budapešti odporúčam navštíviť nejaký koncert a je jedno či je to maličký koncert alebo najjväčší, ktorý usporiadali,
@@ -38,7 +38,7 @@
       <p>Vystudovala jsme psychologii, ale vždycky mě bavila kreativní tvorba. Svoje první, byť velice jednoduché, webové stránky jsem
         vytvořila už ve třinácti, avšak od té doby utekla spousta vody a od té doby jsem se několikrát pokusila rozjet alespoň vlastní blog.
         Jeden z nich, kde se věnuji svému největšímu koníčku, vaření, stále můžete <a href="www.reallyluckykaty.cz">navštívit</a>.
-       Do budoucna bych se ráda naučila něco o uživatelském designu, které vnímám jako ideální propojení mezi psychologií, estetikou a IT. Mimo to se snažím trochu fotit, šiji na stroji nebo hraju na ukulele. S přítelem jsme také postavili obytnout dodávku,
+       <br>Do budoucna bych se ráda naučila něco o uživatelském designu, které vnímám jako ideální propojení mezi psychologií, estetikou a IT. Mimo to se snažím trochu fotit, šiji na stroji nebo hraju na ukulele. S přítelem jsme také postavili obytnout dodávku,
        s níž už jsme navštívili velký kus Evropy. Procestovali jsme tak třeba celou jižní Itálii, kterou jsme si zamilovali. Mojí vysněnou destinací
        je ale jižní Španělsko a mimo Evropu Vietnam, o němž mluvím už pár let.</p>
       </div>
@@ -68,6 +68,14 @@ export default {
 <style scoped>
 a {
   color:green;
+  font-weight: bold;
+}
+p {
+  font-size: 1.1em;
+}
+
+h2 {
+  font-size: 1.5em;
   font-weight: bold;
 }
 main {
