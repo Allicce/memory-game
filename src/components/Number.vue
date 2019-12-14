@@ -21,24 +21,27 @@ export default {
   },
   computed: {
     ...mapState([
-      'actualLevel'
+      'actualLevel',
+      'countItems'
     ])
   },
   methods: {
     ...mapActions([
-      'addArray'
+      'addArray',
+      'addCountItem',
+      'getDefaultState'
     ]),
     randomNumber () {
       if (this.actualLevel >= 6 && this.actualLevel <= 10) {
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i < this.countItems; i++) {
           this.numbers[i] = parseInt(Math.random() * 9 + 1)
         }
       } else if (this.actualLevel >= 11 && this.actualLevel <= 16) {
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i < this.countItems; i++) {
           this.numbers[i] = parseInt(Math.random() * 99 + 1)
         }
       } else if (this.actualLevel >= 16 && this.actualLevel <= 20) {
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i < this.countItems; i++) {
           this.numbers[i] = parseInt(Math.random() * 300 + 1)
         }
       }
@@ -46,6 +49,7 @@ export default {
     }
   },
   created () {
+    this.addCountItem()
     this.randomNumber()
   }
 }
