@@ -17,5 +17,9 @@ export default {
 
   resetLevels: ({ commit }) => {
     commit('getFirstLevel')
+  },
+
+  addCountItem: ({ commit }) => {
+    commit('mutateCountItem')
   }
 }

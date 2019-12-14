@@ -10,12 +10,12 @@ export default {
   resetToDefault: (state, payload) => {
     state.usersNumber = payload
     state.userResults = [
+      /* [],
       [],
       [],
       [],
       [],
-      [],
-      []
+      [] */
     ]
   },
 
@@ -25,5 +25,11 @@ export default {
 
   getFirstLevel: (state) => {
     state.actualLevel = 1
+  },
+
+  mutateCountItem: (state) => {
+    if (state.actualLevel === 1) {
+      state.countItems = 3
+    }
   }
 }

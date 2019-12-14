@@ -13,31 +13,44 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'Picture',
   computed: {
     ...mapState([
       'allPicture',
-      'watchPictures'
+      'watchPictures',
+      'countItems',
+      'actualLevel',
+      'greenMonsterPicture'
     ])
   },
   methods: {
+    ...mapActions([
+      'addCountItem'
+    ]),
+    createItems () {
+      this.addCountItem()
+    },
     randomPicture () {
       while (this.watchPictures.length > 0) {
         this.watchPictures.pop()
       }
-      console.log('create random picture')
-      for (let i = 0; i < 6; i++) {
-        let index = parseInt(Math.random() * 12)
-        this.watchPictures.push([this.allPicture[index]])
+      console.log('create random picture ' + this.countItems)
+      for (let i = 0; i < this.countItems; i++) {
+        let index
+        if (this.actualLevel === 1) {
+          index = parseInt(Math.random() * this.greenMonsterPicture.length)
+          this.watchPictures.push([this.greenMonsterPicture[index]])
+        }
       }
       console.log(this.watchPictures)
     }
 
   },
   created () {
+    this.createItems()
     this.randomPicture()
   }
 }
