@@ -14,6 +14,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import _ from 'lodash'
 
 export default {
   name: 'Picture',
@@ -25,6 +26,7 @@ export default {
       'actualLevel',
       'greenMonsterPicture',
       'blackMonsterPicture',
+      'lilaMonsterPicture',
       'monsterArray'
     ])
   },
@@ -37,12 +39,14 @@ export default {
     createItems () {
       this.addCountItem()
     },
-    createRandomPicture (list) {
+    createRandomPicture (list, breakPoint) {
       let index
-      for (let i = 0; i < this.countItems; i++) {
+      for (let i = 0; i < breakPoint; i++) {
         index = parseInt(Math.random() * list.length)
         this.watchPictures.push([list[index]])
       }
+      let newArray = _.shuffle(this.watchPictures)
+      this.watchPictures = newArray
     },
     randomPicture () {
       while (this.watchPictures.length > 0) {
@@ -50,12 +54,22 @@ export default {
       }
       console.log('create random picture ' + this.countItems)
       if (this.actualLevel === 1) {
-        this.createRandomPicture(this.greenMonsterPicture)
+        this.createRandomPicture(this.greenMonsterPicture, this.countItems)
       } else if (this.actualLevel === 2 || this.actualLevel === 3) {
         this.changeMonsterArray()
-        this.createRandomPicture(this.monsterArray)
+        let index = parseInt(Math.random() * this.greenMonsterPicture.length)
+        this.watchPictures.push([this.greenMonsterPicture[index]])
+        index = parseInt(Math.random() * this.blackMonsterPicture.length)
+        this.watchPictures.push([this.blackMonsterPicture[index]])
+        this.createRandomPicture(this.monsterArray, this.countItems - 2)
       } else if (this.actualLevel === 5 || this.actualLevel === 4) {
-        this.createRandomPicture(this.allPicture)
+        let index = parseInt(Math.random() * this.greenMonsterPicture.length)
+        this.watchPictures.push([this.greenMonsterPicture[index]])
+        index = parseInt(Math.random() * this.blackMonsterPicture.length)
+        this.watchPictures.push([this.blackMonsterPicture[index]])
+        index = parseInt(Math.random() * this.lilaMonsterPicture.length)
+        this.watchPictures.push([this.lilaMonsterPicture[index]])
+        this.createRandomPicture(this.allPicture, this.countItems - 3)
       }
       console.log(this.watchPictures)
     },
