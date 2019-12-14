@@ -21,10 +21,12 @@ export default {
   },
 
   mutateCountItem: (state) => {
-    if (state.actualLevel === 1 || state.actualLevel === 2) {
+    if (state.actualLevel === 1 || state.actualLevel === 2 || state.actualLevel === 6) {
       state.countItems = 3
-    } else if (state.actualLevel >= 3 && state.actualLevel <= 5) {
+    } else if ((state.actualLevel >= 3 && state.actualLevel <= 5) || state.actual === 7 || state.actual === 8) {
       state.countItems = 6
+    } else {
+      state.countItems = 9
     }
     for (let i = 0; i < state.countItems; i++) {
       console.log('create users array')
