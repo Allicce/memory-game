@@ -2,7 +2,7 @@
   <div class="nav">
     <ul>
       <li><router-link to="/about">O nás</router-link></li>
-      <li><router-link to="/pageUnderConstruction">Trenuj</router-link></li>
+      <li><router-link to="/pageUnderConstruction">Trénuj</router-link></li>
       <li><router-link to="/gameScreen">Hraj</router-link></li>
       <li><router-link to="/contact-us">Napiš nám</router-link></li>
     </ul>

@@ -2,9 +2,9 @@
   <div class="container">
     <heading />
     <div class="text">
-      <h1>Objav čo tvoja pamäť dokáže</h1>
-      <p class="description">Zahraj si hru a prever svoju krátkodobu pamäť s ostatnými. Hra zlepší tvoju krátkodobu pamäť,
-      koncentráciu a rýchlosť rozoznávania. Stlač hraj. </p>
+      <h1>Zjisti, co dokáže tvoje paměť</h1>
+      <p class="description">Chceš si zlepšit krátkodobu paměť,
+      koncentraci a rychlost zpracování informací? S námi můžeš! Buď si můžeš hru jen tak volně vyzkoušet, nebo tvůj výsledek porovnáme s ostatními. Tak hurá do toho!</p>
     </div>
     <div class="container_button">
       <div class="monster_mobile">
@@ -14,7 +14,7 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
       <Button class="button_left button" name="hraj" @click.native="goToPath('/gameScreen')"/>
-      <Button class="button_right button " name="Trenuj" @click.native="goToPath('/pageUnderConstruction')"/>
+      <Button class="button_right button " name="Trénuj" @click.native="goToPath('/pageUnderConstruction')"/>
       <div class="monster_welcome_page right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
