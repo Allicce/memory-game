@@ -165,6 +165,8 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, minmax(80px, 1fr));
     justify-content: space-around;
+    min-width: 240px;
+    min-height: 340px;
 
   }
 
