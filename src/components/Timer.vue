@@ -73,9 +73,9 @@ export default {
     this.tick = setInterval(() => {
       this.now = DateTime.local()
     }, 10)
-    this.timeout = setTimeout(() => {
+    /* this.timeout = setTimeout(() => {
       this.$router.push('/gameScreen/usersResults')
-    }, 15000)
+    }, 15000) */
   },
   destroyed () {
     console.log('clearTimeout')

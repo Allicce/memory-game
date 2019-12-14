@@ -94,7 +94,7 @@ export default {
 
     .button {
       margin: 0;
-      margin-left: 70vw;
+      margin-left: 30vw;
       margin-top: 1%;
       justify-self: flex-end;
       width: 15vw;
@@ -110,6 +110,10 @@ export default {
 
     .pad {
       padding: 2% 0 5% 0;
+    }
+
+    .button {
+      margin-left: 50vw;
     }
   }
 

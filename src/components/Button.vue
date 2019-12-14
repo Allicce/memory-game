@@ -65,7 +65,7 @@ export default {
     .button_cont {
       padding: 0 5% 0 5%;
       padding: 20px;
-      width: 100%;
+      max-width: 10vw;
       display: inline-block;
       border: none;
       transition: all 0.4s ease 0s;
