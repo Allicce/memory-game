@@ -14,7 +14,7 @@
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>
       <Button class="button_left button" name="hraj" @click.native="goToPath('/gameScreen')"/>
-      <Button class="button_right button " name="Trénuj" @click.native="goToPath('/pageUnderConstruction')"/>
+      <Button class="button_right button " name="Trénuj" :isDarkerGreen="true" @click.native="goToPath('/pageUnderConstruction')"/>
       <div class="monster_welcome_page right">
         <img src="../../public/Charac_S-F2-Idle_0.png" alt="monster">
       </div>

@@ -75,9 +75,9 @@ export default {
       }
       if (this.actualLevel === 1) {
         this.createList(this.greenMonsterPicture)
-      } else if (this.actualLevel >= 2 && this.actualLevel <= 4) {
+      } else if (this.actualLevel >= 2 && this.actualLevel < 4) {
         this.createList(this.monsterArray)
-      } else if (this.actualLevel === 5) {
+      } else if (this.actualLevel === 5 || this.actualLevel === 4) {
         this.createList(this.allPicture)
       }
       this.shuffledArray = _.shuffle(this.list)

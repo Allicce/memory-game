@@ -2,7 +2,7 @@
   <div class="button_cont">
     <p class="button_cont button_default"
        v-bind:class="{ 'green_button': isGreen,
-                      'light_green_button': isLightGreen,
+                      'darker_green_button': isDarkerGreen,
                       'disabled': isDisabled}">{{name}}</p>
   </div>
 
@@ -21,7 +21,7 @@ export default {
       type: Boolean,
       default: true
     },
-    isLightGreen: {
+    isDarkerGreen: {
       type: Boolean,
       default: false
     },
@@ -49,8 +49,8 @@ export default {
     background: green;
   }
 
-  .light_green_button {
-    background: #699841;
+  .darker_green_button {
+    background: #32936F;
   }
 
   p {
@@ -72,7 +72,7 @@ export default {
     }
 
     .button_default:hover {
-      background: #93c330;
+      background: #124559;
       letter-spacing: 1px;
       -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
       -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
