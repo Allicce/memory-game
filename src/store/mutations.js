@@ -21,18 +21,10 @@ export default {
   },
 
   mutateCountItem: (state) => {
-    /* setTimeout(() => {
-      if (state.actualLevel === 1 || state.actualLevel === 2) {
-        state.countItems = 3
-      }
-      for (let i = 0; i < state.countItems; i++) {
-        console.log('create users array')
-        state.userResults.push([])
-      }
-    }, 1000) */
-
     if (state.actualLevel === 1 || state.actualLevel === 2) {
       state.countItems = 3
+    } else if (state.actualLevel >= 3 && state.actualLevel <= 5) {
+      state.countItems = 6
     }
     for (let i = 0; i < state.countItems; i++) {
       console.log('create users array')
@@ -41,7 +33,7 @@ export default {
   },
 
   mutationMonsterArray: (state) => {
-    if (state.actualLevel === 2) {
+    if (state.actualLevel === 2 || state.actualLevel === 3) {
       state.monsterArray = state.greenMonsterPicture.concat(state.blackMonsterPicture)
     }
   }
