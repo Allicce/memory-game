@@ -1,20 +1,15 @@
 <template>
   <div class="container">
-    <div class="picture"><img :src="image_src"></div>
+    <div class="picture"><slot name="picture"></slot></div>
     <div class="text">
-      <h2>{{ title }}</h2>
-      <div class="about">{{ text }}</div>
+      <slot name="text"></slot>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['title', 'image', 'text'],
   data () {
-    return {
-      image_src: require(`../../public/${this.image}`)
-    }
   }
 }
 </script>
@@ -42,18 +37,19 @@ h2 {
   flex: 1 1 50%;
   padding: 0 10%;
 }
-  img {
-    width: 50%;
-    padding: 0 10%;
-  }
 
-  .white {
-    background-color: white;
-  }
+img {
+  width: 50%;
+  padding: 0 10%;
+}
 
-  .green {
-    background-color: white;
-  }
+.white {
+  background-color: white;
+}
+
+.green {
+  background-color: white;
+}
 
 @media (min-width: 1200px) {
   .container {
