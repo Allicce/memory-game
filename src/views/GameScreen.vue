@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div v-else class="flex_container">
+    <div v-if="actualLevel >= 6" class="flex_container">
       <div class="text">
         <h1> Level {{ actualLevel }}</h1>
         <p> Zapamätaj si všetky čísla v presnom poradí</p>
@@ -117,7 +117,7 @@ export default {
       width: 90vw;
     }
     .container_screen {
-      flex-direction: column;
+      /* flex-direction: column; */
     }
   }
 
