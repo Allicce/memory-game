@@ -2,7 +2,7 @@
   <div class="container">
     <heading />
     <div class="text">
-      <h1>Zjisti, co dokáže tvoje paměť</h1>
+      <h1>Zjisti, co dokáže tvoje paměť!</h1>
       <p class="description">Chceš si zlepšit krátkodobu paměť,
       koncentraci a rychlost zpracování informací? S námi můžeš! Buď si můžeš hru jen tak volně vyzkoušet, nebo tvůj výsledek porovnáme s ostatními. Tak hurá do toho!</p>
     </div>
