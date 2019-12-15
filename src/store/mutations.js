@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export default {
   addWatchNumbers: (state, payload) => {
     state.watchNumber = payload
@@ -38,6 +40,10 @@ export default {
     if (state.actualLevel === 2 || state.actualLevel === 3) {
       state.monsterArray = state.greenMonsterPicture.concat(state.blackMonsterPicture)
     }
+  },
+
+  shuffleWatchArrays: (state) => {
+    state.watchPictures = _.shuffle(state.watchPictures)
   }
 
 }

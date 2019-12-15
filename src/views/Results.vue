@@ -67,6 +67,10 @@
               name="hraj znova!"
               @click.native="goToPath('/gameScreen'), resetToFirstLevel()"
       />
+      <Button class="button"
+              name="Výsletky"
+              @click.native="goToPath('/inputForm')"
+      ></Button>
       <div class="image">
         <img src="../../public/Characs_F-F2-Idle.gif">
       </div>

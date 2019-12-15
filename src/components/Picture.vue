@@ -14,7 +14,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import _ from 'lodash'
 
 export default {
   name: 'Picture',
@@ -34,7 +33,8 @@ export default {
     ...mapActions([
       'addCountItem',
       'addMonsterArray',
-      'getDefaultState'
+      'getDefaultState',
+      'shuffleWatchArray'
     ]),
     createItems () {
       this.addCountItem()
@@ -45,8 +45,7 @@ export default {
         index = parseInt(Math.random() * list.length)
         this.watchPictures.push([list[index]])
       }
-      let newArray = _.shuffle(this.watchPictures)
-      this.watchPictures = newArray
+      this.shuffleWatchArray()
     },
     randomPicture () {
       while (this.watchPictures.length > 0) {
