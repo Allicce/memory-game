@@ -68,7 +68,7 @@
               @click.native="goToPath('/gameScreen'), resetToFirstLevel()"
       />
       <Button class="button"
-              name="Výsletky"
+              name="Výsledky"
               @click.native="goToPath('/inputForm')"
       ></Button>
       <div class="image">

@@ -10,6 +10,7 @@ import PageUnderConstruction from '../views/PageUnderConstruction'
 import EndGame from '../views/EndGame'
 import ResultForm from '../views/ResultForm'
 import InputForm from '../views/InputForm'
+import Percentil from '../views/Percentil'
 
 Vue.use(VueRouter)
 
@@ -63,6 +64,11 @@ const routes = [
     path: '/inputForm',
     name: 'inputForm',
     component: InputForm
+  },
+  {
+    path: '/percentil',
+    name: 'percentil',
+    component: Percentil
   }
 ]
 

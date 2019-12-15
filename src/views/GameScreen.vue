@@ -103,6 +103,7 @@ export default {
   .flex_container {
     display: flex;
     justify-content: center;
+    align-content: center;
   }
 
   .timer {
@@ -123,7 +124,7 @@ export default {
 
   @media(min-width: 1200px) {
     .text {
-      padding-top: 10%;
+      /*padding-top: 10%;*/
       padding-bottom: 0;
     }
 

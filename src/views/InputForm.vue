@@ -23,8 +23,8 @@
         <option value="5">Více než 65 let</option>
       </select><br>
         <div class="buttons">
-      <Button v-on:click.native="submitForm('/gameScreen')" class="sendButton" name="Potvrdit a hrát" /> <br>
-      <router-link to="/">Zpátky domů</router-link> <router-link to="/gameScreen" class="skip">Přeskočit</router-link>
+      <Button v-on:click.native="submitForm('/percentil')" class="sendButton" name="Ukáž percentil" /> <br>
+      <router-link to="/">Zpátky domů</router-link> <router-link to="/percentil" class="skip">Přeskočit</router-link>
       </div>
     </form>
     <foot class="foot" />
@@ -35,7 +35,7 @@
 import Button from '../components/Button'
 import heading from '../components/Header'
 import foot from '../components/Footer'
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   components: {
     Button,
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     submitForm (path) {
-      axios.post('http://localhost:3000/Results', {
+      /* axios.post('http://localhost:3000/Results', {
         gender: this.Results.gender,
         age: this.Results.age
       })
@@ -63,6 +63,8 @@ export default {
           console.log(error)
         }
         )
+    } */
+      this.$router.push(path)
     }
   }
 }
