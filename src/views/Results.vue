@@ -67,7 +67,7 @@
               name="hraj znova!"
               @click.native="goToPath('/gameScreen'), resetToFirstLevel()"
       />
-      <Button class="button"
+      <Button class="button left_button"
               name="Výsledky"
               @click.native="goToPath('/inputForm')"
       ></Button>
@@ -276,8 +276,12 @@ export default {
 
     .button {
       width: 15vw;
-      padding: 3% 10%;
+      padding: 3% 10% 3% 0;
 
+    }
+
+    left_button {
+      padding: 3% 0 0 0;
     }
 
     .image {
