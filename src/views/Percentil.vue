@@ -9,14 +9,14 @@
     </div>
 
     <div class="conainer_button">
-      <Buttons name="Hraj znova" @click.native="goToPath('/gameScreen')"></Buttons>
+      <Buttons name="Hraj znova" @click.native="goToPath('/gameScreen'), resetToFirstLevel()"></Buttons>
     </div>
   </div>
 
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import Buttons from '../components/Button.vue'
 import ChartArea from '../components/Chart.vue'
 import Header from '../components/Header.vue'
@@ -39,6 +39,12 @@ export default {
     ])
   },
   methods: {
+    ...mapActions([
+      'resetLevels'
+    ]),
+    resetToFirstLevel () {
+      this.resetLevels([])
+    },
     addPercentil () {
       switch (this.actualLevel) {
         case 1: {
