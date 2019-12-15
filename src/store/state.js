@@ -2,7 +2,7 @@ export default {
   watchNumber: [],
   usersNumber: [],
   totalLevel: 20,
-  actualLevel: 2,
+  actualLevel: 1,
   allPicture: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'],
   greenMonsterPicture: ['A', 'D', 'H', 'K'],
   lilaMonsterPicture: ['B', 'E', 'G', 'J'],

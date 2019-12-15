@@ -1,10 +1,11 @@
 <template>
 
   <div class="containter">
+    <Header></Header>
     <h1>Percentil: {{percentil}}</h1>
     <h2>Si lepší ako {{percentil}}% populácie</h2>
     <div class="chart">
-      <chart-area></chart-area>
+      <chart-area class="chart_item"></chart-area>
     </div>
 
     <div class="conainer_button">
@@ -18,12 +19,14 @@
 import { mapState } from 'vuex'
 import Buttons from '../components/Button.vue'
 import ChartArea from '../components/Chart.vue'
+import Header from '../components/Header.vue'
 
 export default {
   name: 'Percentil',
   components: {
     Buttons,
-    ChartArea
+    ChartArea,
+    Header
   },
   data () {
     return {
@@ -82,6 +85,9 @@ export default {
           this.percentil = 87
         }
       }
+    },
+    goToPath (path) {
+      this.$router.push(path)
     }
   },
   created () {
@@ -97,6 +103,11 @@ export default {
     margin: auto;
     background-color: white;
     width: 50vw;
+  }
+
+  .chart_item {
+    width: auto;
+    height: 25vw;
   }
 
 </style>
